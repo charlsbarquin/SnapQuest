@@ -2,11 +2,13 @@
 
 SnapQuest is an offline trivia and camera-challenge game for Android. Play a full game on your own or pass the device between friends, answer multiple-choice questions, and take turns completing **Find & Frame** prompts. It is designed for curious players and for students and developers who want to explore a Kotlin and Jetpack Compose application.
 
+Repository links: [Source code](https://github.com/charlsbarquin/SnapQuest) · [Releases](https://github.com/charlsbarquin/SnapQuest/releases) · [Issues](https://github.com/charlsbarquin/SnapQuest/issues)
+
 ## Download SnapQuest
 
-> **Release pending — no public APK is available yet.** This project checkout has no configured Git remote, verified GitHub repository URL, published GitHub Release, or signed release APK. Do not install the local debug APK as a production release.
+> **Source code available. Public APK release pending.** The SnapQuest source code is available on GitHub, but a signed release APK has not yet been published. Do not treat the local debug APK as a production release.
 
-Once the project owner publishes a signed APK, visitors can download it from the official repository's **Releases** page. The repository owner must provide or configure the GitHub `owner/repository` URL before this page can link to the repository, release, APK, or issue tracker. See [Publishing a release](#publishing-a-release) for the remaining steps.
+Repository: [charlsbarquin/SnapQuest](https://github.com/charlsbarquin/SnapQuest) · [Releases](https://github.com/charlsbarquin/SnapQuest/releases) · [Report an issue](https://github.com/charlsbarquin/SnapQuest/issues). Once a signed APK is published, download it from the repository's [Releases page](https://github.com/charlsbarquin/SnapQuest/releases). See [Publishing a release](#publishing-a-release) for the remaining steps.
 
 The current app configuration supports devices running **Android 8.0 (API 26) or later**. A camera is needed to capture a Find & Frame submission; the app does not require a camera to be present just to install.
 
@@ -152,7 +154,7 @@ These are recorded results from that tested build, not a guarantee for every dev
 
 ## Feedback and bug reports
 
-No verified GitHub repository URL or issue tracker is configured in this checkout, so an Issues link cannot be supplied yet. Once the owner publishes the repository and enables Issues, include the device model, Android version, steps to reproduce, and expected versus actual behavior in a report. Do not attach photos, private documents, credentials, addresses, or other sensitive information.
+Use the [SnapQuest Issues page](https://github.com/charlsbarquin/SnapQuest/issues) to report bugs, if Issues are enabled for the repository. Include the device model, Android version, steps to reproduce, and expected versus actual behavior. Do not attach photos, private documents, credentials, addresses, or other sensitive information.
 
 ## License and credits
 
@@ -160,13 +162,13 @@ There is no license file in this repository. Until the owner selects and adds a 
 
 ## Publishing a release
 
-There is no verified GitHub remote, public repository URL, release page, or published APK available from this checkout. The release build has no signing configuration, and no signing credentials were found in the project; no release APK was generated. The local debug APK is not a substitute for a signed release.
+The source repository is available at [charlsbarquin/SnapQuest](https://github.com/charlsbarquin/SnapQuest). A signed release APK has not yet been published. The project does not currently have a verified release-signing configuration, and no signing credentials were found in the project. The local debug APK is not a substitute for a signed release.
 
 To make SnapQuest downloadable:
 
-1. Provide or configure the intended GitHub repository URL (`owner/repository`) and publish the source repository.
-2. Choose a release-signing approach and configure it outside source control. Keep the keystore and passwords private; never commit them or put them in this README. Preserve the same signing key for future updates.
-3. Generate and verify a signed release APK after signing is configured.
-4. Create a GitHub Release in the verified repository and attach the signed APK. Then add verified repository, latest-release, APK, and Issues links near the top of this README.
+1. Configure Android release signing outside source control. Keep the keystore and passwords private. Never commit them or put them in this README. Preserve the same signing key for future updates.
+2. Generate and test a signed release APK after signing is configured.
+3. Open the [SnapQuest repository](https://github.com/charlsbarquin/SnapQuest), create a GitHub Release, and attach the signed APK.
+4. Update the download section with the specific release and APK asset links after publication.
 
-Until those steps are complete, visitors can inspect and build the source but cannot download an official release APK from GitHub.
+Until those steps are complete, visitors can inspect and build the source code, but they cannot download an official release APK from GitHub.
