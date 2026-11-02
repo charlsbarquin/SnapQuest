@@ -1,0 +1,4325 @@
+{
+  "schemaVersion": 1,
+  "questions": [
+    {
+      "id": "general_knowledge_easy_01",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "How many original member states founded the United Nations in 1945?",
+      "choices": [
+        {
+          "id": "general_knowledge_easy_01_a",
+          "text": "51"
+        },
+        {
+          "id": "general_knowledge_easy_01_b",
+          "text": "27"
+        },
+        {
+          "id": "general_knowledge_easy_01_c",
+          "text": "75"
+        },
+        {
+          "id": "general_knowledge_easy_01_d",
+          "text": "193"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_easy_01_a",
+      "explanation": "The organization began with 51 member states.",
+      "sourceTitle": "About Us | United Nations",
+      "sourceUrl": "https://www.un.org/en/about-us",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_easy_02",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What is the SI base unit of length?",
+      "choices": [
+        {
+          "id": "general_knowledge_easy_02_a",
+          "text": "second"
+        },
+        {
+          "id": "general_knowledge_easy_02_b",
+          "text": "kelvin"
+        },
+        {
+          "id": "general_knowledge_easy_02_c",
+          "text": "mole"
+        },
+        {
+          "id": "general_knowledge_easy_02_d",
+          "text": "metre"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_easy_02_d",
+      "explanation": "The metre is the SI base unit for length.",
+      "sourceTitle": "SI Base Units | BIPM",
+      "sourceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_easy_03",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What is the SI base unit of time?",
+      "choices": [
+        {
+          "id": "general_knowledge_easy_03_a",
+          "text": "candela"
+        },
+        {
+          "id": "general_knowledge_easy_03_b",
+          "text": "kilogram"
+        },
+        {
+          "id": "general_knowledge_easy_03_c",
+          "text": "second"
+        },
+        {
+          "id": "general_knowledge_easy_03_d",
+          "text": "ampere"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_easy_03_c",
+      "explanation": "The second is the SI base unit for time.",
+      "sourceTitle": "SI Base Units | BIPM",
+      "sourceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_easy_04",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "How many SI base units are there?",
+      "choices": [
+        {
+          "id": "general_knowledge_easy_04_a",
+          "text": "Ten"
+        },
+        {
+          "id": "general_knowledge_easy_04_b",
+          "text": "Seven"
+        },
+        {
+          "id": "general_knowledge_easy_04_c",
+          "text": "Five"
+        },
+        {
+          "id": "general_knowledge_easy_04_d",
+          "text": "Eight"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_easy_04_b",
+      "explanation": "The SI has seven base units.",
+      "sourceTitle": "SI Base Units | BIPM",
+      "sourceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_easy_05",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "In which year was the World Heritage Convention adopted?",
+      "choices": [
+        {
+          "id": "general_knowledge_easy_05_a",
+          "text": "1972"
+        },
+        {
+          "id": "general_knowledge_easy_05_b",
+          "text": "1945"
+        },
+        {
+          "id": "general_knowledge_easy_05_c",
+          "text": "1989"
+        },
+        {
+          "id": "general_knowledge_easy_05_d",
+          "text": "2000"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_easy_05_a",
+      "explanation": "UNESCO adopted the convention in 1972.",
+      "sourceTitle": "Convention Concerning the Protection of World Cultural and Natural Heritage | UNESCO",
+      "sourceUrl": "https://www.unesco.org/en/legal-affairs/convention-concerning-protection-world-cultural-and-natural-heritage",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_easy_06",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What is the name of Earth’s home galaxy?",
+      "choices": [
+        {
+          "id": "general_knowledge_easy_06_a",
+          "text": "Andromeda"
+        },
+        {
+          "id": "general_knowledge_easy_06_b",
+          "text": "Whirlpool Galaxy"
+        },
+        {
+          "id": "general_knowledge_easy_06_c",
+          "text": "Sombrero Galaxy"
+        },
+        {
+          "id": "general_knowledge_easy_06_d",
+          "text": "Milky Way"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_easy_06_d",
+      "explanation": "Our solar system is in the Milky Way.",
+      "sourceTitle": "Solar System Facts | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/solar-system-facts/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_medium_01",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What does the SI unit kelvin measure?",
+      "choices": [
+        {
+          "id": "general_knowledge_medium_01_a",
+          "text": "Electric current"
+        },
+        {
+          "id": "general_knowledge_medium_01_b",
+          "text": "Luminous intensity"
+        },
+        {
+          "id": "general_knowledge_medium_01_c",
+          "text": "Amount of substance"
+        },
+        {
+          "id": "general_knowledge_medium_01_d",
+          "text": "Thermodynamic temperature"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_medium_01_d",
+      "explanation": "Kelvin is the SI unit for thermodynamic temperature.",
+      "sourceTitle": "SI Base Units | BIPM",
+      "sourceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_medium_02",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which SI base unit measures amount of substance?",
+      "choices": [
+        {
+          "id": "general_knowledge_medium_02_a",
+          "text": "Ampere"
+        },
+        {
+          "id": "general_knowledge_medium_02_b",
+          "text": "Metre"
+        },
+        {
+          "id": "general_knowledge_medium_02_c",
+          "text": "Mole"
+        },
+        {
+          "id": "general_knowledge_medium_02_d",
+          "text": "Candela"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_medium_02_c",
+      "explanation": "The mole is the base unit for amount of substance.",
+      "sourceTitle": "SI Base Units | BIPM",
+      "sourceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_medium_03",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What is the SI unit of electric current?",
+      "choices": [
+        {
+          "id": "general_knowledge_medium_03_a",
+          "text": "Candela"
+        },
+        {
+          "id": "general_knowledge_medium_03_b",
+          "text": "Ampere"
+        },
+        {
+          "id": "general_knowledge_medium_03_c",
+          "text": "Kelvin"
+        },
+        {
+          "id": "general_knowledge_medium_03_d",
+          "text": "Second"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_medium_03_b",
+      "explanation": "Electric current is measured in amperes in the SI.",
+      "sourceTitle": "SI Base Units | BIPM",
+      "sourceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_medium_04",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What is the SI unit of luminous intensity?",
+      "choices": [
+        {
+          "id": "general_knowledge_medium_04_a",
+          "text": "Candela"
+        },
+        {
+          "id": "general_knowledge_medium_04_b",
+          "text": "Mole"
+        },
+        {
+          "id": "general_knowledge_medium_04_c",
+          "text": "Kilogram"
+        },
+        {
+          "id": "general_knowledge_medium_04_d",
+          "text": "Metre"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_medium_04_a",
+      "explanation": "Candela is the SI base unit for luminous intensity.",
+      "sourceTitle": "SI Base Units | BIPM",
+      "sourceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_medium_05",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What does one astronomical unit approximately represent?",
+      "choices": [
+        {
+          "id": "general_knowledge_medium_05_a",
+          "text": "The distance from Earth to the Moon"
+        },
+        {
+          "id": "general_knowledge_medium_05_b",
+          "text": "The diameter of the Sun"
+        },
+        {
+          "id": "general_knowledge_medium_05_c",
+          "text": "The distance to the nearest star"
+        },
+        {
+          "id": "general_knowledge_medium_05_d",
+          "text": "Earth’s average distance from the Sun"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_medium_05_d",
+      "explanation": "One astronomical unit is about 150 million kilometres, roughly the average Earth–Sun distance.",
+      "sourceTitle": "Solar System Facts | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/solar-system-facts/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_medium_06",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which Latin word is the origin of “solar” in the name solar system?",
+      "choices": [
+        {
+          "id": "general_knowledge_medium_06_a",
+          "text": "Terra"
+        },
+        {
+          "id": "general_knowledge_medium_06_b",
+          "text": "Stella"
+        },
+        {
+          "id": "general_knowledge_medium_06_c",
+          "text": "Solis"
+        },
+        {
+          "id": "general_knowledge_medium_06_d",
+          "text": "Luna"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_medium_06_c",
+      "explanation": "NASA notes solar comes from the Latin word for the Sun, solis.",
+      "sourceTitle": "Solar System Facts | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/solar-system-facts/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_hard_01",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which four SI base units were redefined in the 2018 SI revision?",
+      "choices": [
+        {
+          "id": "general_knowledge_hard_01_a",
+          "text": "Second, metre, ampere, and candela"
+        },
+        {
+          "id": "general_knowledge_hard_01_b",
+          "text": "Mole, metre, second, and kelvin"
+        },
+        {
+          "id": "general_knowledge_hard_01_c",
+          "text": "Kilogram, ampere, kelvin, and mole"
+        },
+        {
+          "id": "general_knowledge_hard_01_d",
+          "text": "Metre, second, candela, and kilogram"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_hard_01_c",
+      "explanation": "BIPM identifies these four units as changed in the 2018 revision.",
+      "sourceTitle": "SI Base Units | BIPM",
+      "sourceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_hard_02",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which SI base unit has the symbol cd?",
+      "choices": [
+        {
+          "id": "general_knowledge_hard_02_a",
+          "text": "Degree"
+        },
+        {
+          "id": "general_knowledge_hard_02_b",
+          "text": "Candela"
+        },
+        {
+          "id": "general_knowledge_hard_02_c",
+          "text": "Coulomb"
+        },
+        {
+          "id": "general_knowledge_hard_02_d",
+          "text": "Candela-second"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_hard_02_b",
+      "explanation": "The symbol for candela is cd.",
+      "sourceTitle": "SI Base Units | BIPM",
+      "sourceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_hard_03",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "How long does NASA estimate the solar system takes to orbit the Milky Way’s centre?",
+      "choices": [
+        {
+          "id": "general_knowledge_hard_03_a",
+          "text": "About 230 million years"
+        },
+        {
+          "id": "general_knowledge_hard_03_b",
+          "text": "About 23 thousand years"
+        },
+        {
+          "id": "general_knowledge_hard_03_c",
+          "text": "About 2.3 billion years"
+        },
+        {
+          "id": "general_knowledge_hard_03_d",
+          "text": "About 230 years"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_hard_03_a",
+      "explanation": "NASA gives an approximate galactic orbit period of 230 million years.",
+      "sourceTitle": "Solar System Facts | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/solar-system-facts/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_hard_04",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which dwarf planet is the largest object in the asteroid belt?",
+      "choices": [
+        {
+          "id": "general_knowledge_hard_04_a",
+          "text": "Pluto"
+        },
+        {
+          "id": "general_knowledge_hard_04_b",
+          "text": "Eris"
+        },
+        {
+          "id": "general_knowledge_hard_04_c",
+          "text": "Haumea"
+        },
+        {
+          "id": "general_knowledge_hard_04_d",
+          "text": "Ceres"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_hard_04_d",
+      "explanation": "NASA identifies Ceres as the largest object in the asteroid belt.",
+      "sourceTitle": "About the Planets | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/planets/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_hard_05",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which of Pluto’s moons is large enough that Pluto and it are sometimes described as a double system?",
+      "choices": [
+        {
+          "id": "general_knowledge_hard_05_a",
+          "text": "Hydra"
+        },
+        {
+          "id": "general_knowledge_hard_05_b",
+          "text": "Kerberos"
+        },
+        {
+          "id": "general_knowledge_hard_05_c",
+          "text": "Charon"
+        },
+        {
+          "id": "general_knowledge_hard_05_d",
+          "text": "Nix"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_hard_05_c",
+      "explanation": "Charon is about half the size of Pluto, so the two are sometimes called a double dwarf planet system.",
+      "sourceTitle": "Charon | NASA Science",
+      "sourceUrl": "https://science.nasa.gov/dwarf-planets/pluto/moons/charon/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "general_knowledge_hard_06",
+      "categoryId": "general_knowledge",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "How many officially recognized dwarf planets does NASA list in our solar system?",
+      "choices": [
+        {
+          "id": "general_knowledge_hard_06_a",
+          "text": "Twelve"
+        },
+        {
+          "id": "general_knowledge_hard_06_b",
+          "text": "Five"
+        },
+        {
+          "id": "general_knowledge_hard_06_c",
+          "text": "Three"
+        },
+        {
+          "id": "general_knowledge_hard_06_d",
+          "text": "Eight"
+        }
+      ],
+      "correctChoiceId": "general_knowledge_hard_06_b",
+      "explanation": "NASA lists five officially recognized dwarf planets.",
+      "sourceTitle": "About the Planets | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/planets/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_easy_01",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which planet is closest to the Sun?",
+      "choices": [
+        {
+          "id": "science_easy_01_a",
+          "text": "Venus"
+        },
+        {
+          "id": "science_easy_01_b",
+          "text": "Earth"
+        },
+        {
+          "id": "science_easy_01_c",
+          "text": "Mars"
+        },
+        {
+          "id": "science_easy_01_d",
+          "text": "Mercury"
+        }
+      ],
+      "correctChoiceId": "science_easy_01_d",
+      "explanation": "Mercury is the nearest planet to the Sun.",
+      "sourceTitle": "About the Planets | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/planets/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_easy_02",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which planet is the largest in our solar system?",
+      "choices": [
+        {
+          "id": "science_easy_02_a",
+          "text": "Neptune"
+        },
+        {
+          "id": "science_easy_02_b",
+          "text": "Earth"
+        },
+        {
+          "id": "science_easy_02_c",
+          "text": "Jupiter"
+        },
+        {
+          "id": "science_easy_02_d",
+          "text": "Saturn"
+        }
+      ],
+      "correctChoiceId": "science_easy_02_c",
+      "explanation": "Jupiter is the largest planet in the solar system.",
+      "sourceTitle": "About the Planets | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/planets/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_easy_03",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which planet is third from the Sun?",
+      "choices": [
+        {
+          "id": "science_easy_03_a",
+          "text": "Jupiter"
+        },
+        {
+          "id": "science_easy_03_b",
+          "text": "Earth"
+        },
+        {
+          "id": "science_easy_03_c",
+          "text": "Venus"
+        },
+        {
+          "id": "science_easy_03_d",
+          "text": "Mars"
+        }
+      ],
+      "correctChoiceId": "science_easy_03_b",
+      "explanation": "The order begins Mercury, Venus, Earth.",
+      "sourceTitle": "About the Planets | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/planets/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_easy_04",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What are the three phases of water described by NOAA?",
+      "choices": [
+        {
+          "id": "science_easy_04_a",
+          "text": "Solid, liquid, and gas"
+        },
+        {
+          "id": "science_easy_04_b",
+          "text": "Ice, metal, and gas"
+        },
+        {
+          "id": "science_easy_04_c",
+          "text": "Solid, plasma, and liquid"
+        },
+        {
+          "id": "science_easy_04_d",
+          "text": "Liquid, vapor, and light"
+        }
+      ],
+      "correctChoiceId": "science_easy_04_a",
+      "explanation": "Water occurs in solid, liquid, and gas phases.",
+      "sourceTitle": "The Water Cycle | NOAA",
+      "sourceUrl": "https://www.noaa.gov/education/resource-collections/freshwater/water-cycle",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_easy_05",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What is the process called when liquid water changes into water vapor?",
+      "choices": [
+        {
+          "id": "science_easy_05_a",
+          "text": "Condensation"
+        },
+        {
+          "id": "science_easy_05_b",
+          "text": "Precipitation"
+        },
+        {
+          "id": "science_easy_05_c",
+          "text": "Infiltration"
+        },
+        {
+          "id": "science_easy_05_d",
+          "text": "Evaporation"
+        }
+      ],
+      "correctChoiceId": "science_easy_05_d",
+      "explanation": "Evaporation moves water into the atmosphere as vapor.",
+      "sourceTitle": "The Water Cycle | NOAA",
+      "sourceUrl": "https://www.noaa.gov/education/resource-collections/freshwater/water-cycle",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_easy_06",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What is Earth’s natural satellite?",
+      "choices": [
+        {
+          "id": "science_easy_06_a",
+          "text": "Europa"
+        },
+        {
+          "id": "science_easy_06_b",
+          "text": "Titan"
+        },
+        {
+          "id": "science_easy_06_c",
+          "text": "The Moon"
+        },
+        {
+          "id": "science_easy_06_d",
+          "text": "Phobos"
+        }
+      ],
+      "correctChoiceId": "science_easy_06_c",
+      "explanation": "The Moon is Earth’s natural satellite.",
+      "sourceTitle": "Solar System Facts | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/solar-system-facts/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_medium_01",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which planet is hottest on average in NASA’s comparison of planetary temperatures?",
+      "choices": [
+        {
+          "id": "science_medium_01_a",
+          "text": "Mars"
+        },
+        {
+          "id": "science_medium_01_b",
+          "text": "Jupiter"
+        },
+        {
+          "id": "science_medium_01_c",
+          "text": "Venus"
+        },
+        {
+          "id": "science_medium_01_d",
+          "text": "Mercury"
+        }
+      ],
+      "correctChoiceId": "science_medium_01_c",
+      "explanation": "Venus is hottest because its dense, carbon-dioxide-rich atmosphere traps heat through an intense greenhouse effect.",
+      "sourceTitle": "Venus: Facts | NASA Science",
+      "sourceUrl": "https://science.nasa.gov/venus/venus-facts/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_medium_02",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which planets are classified as ice giants?",
+      "choices": [
+        {
+          "id": "science_medium_02_a",
+          "text": "Venus and Mercury"
+        },
+        {
+          "id": "science_medium_02_b",
+          "text": "Uranus and Neptune"
+        },
+        {
+          "id": "science_medium_02_c",
+          "text": "Jupiter and Saturn"
+        },
+        {
+          "id": "science_medium_02_d",
+          "text": "Earth and Mars"
+        }
+      ],
+      "correctChoiceId": "science_medium_02_b",
+      "explanation": "NASA classifies Uranus and Neptune as ice giants.",
+      "sourceTitle": "About the Planets | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/planets/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_medium_03",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which planets are classified as gas giants?",
+      "choices": [
+        {
+          "id": "science_medium_03_a",
+          "text": "Jupiter and Saturn"
+        },
+        {
+          "id": "science_medium_03_b",
+          "text": "Uranus and Neptune"
+        },
+        {
+          "id": "science_medium_03_c",
+          "text": "Mercury and Venus"
+        },
+        {
+          "id": "science_medium_03_d",
+          "text": "Earth and Mars"
+        }
+      ],
+      "correctChoiceId": "science_medium_03_a",
+      "explanation": "Jupiter and Saturn are gas giants.",
+      "sourceTitle": "About the Planets | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/planets/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_medium_04",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which process forms clouds as water vapor cools?",
+      "choices": [
+        {
+          "id": "science_medium_04_a",
+          "text": "Evaporation"
+        },
+        {
+          "id": "science_medium_04_b",
+          "text": "Runoff"
+        },
+        {
+          "id": "science_medium_04_c",
+          "text": "Melting"
+        },
+        {
+          "id": "science_medium_04_d",
+          "text": "Condensation"
+        }
+      ],
+      "correctChoiceId": "science_medium_04_d",
+      "explanation": "Condensation changes water vapor into liquid droplets.",
+      "sourceTitle": "The Water Cycle | NOAA",
+      "sourceUrl": "https://www.noaa.gov/education/resource-collections/freshwater/water-cycle",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_medium_05",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What is the fourth planet from the Sun?",
+      "choices": [
+        {
+          "id": "science_medium_05_a",
+          "text": "Jupiter"
+        },
+        {
+          "id": "science_medium_05_b",
+          "text": "Venus"
+        },
+        {
+          "id": "science_medium_05_c",
+          "text": "Mars"
+        },
+        {
+          "id": "science_medium_05_d",
+          "text": "Earth"
+        }
+      ],
+      "correctChoiceId": "science_medium_05_c",
+      "explanation": "Mars follows Mercury, Venus, and Earth.",
+      "sourceTitle": "About the Planets | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/planets/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_medium_06",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What is the largest moon in the solar system?",
+      "choices": [
+        {
+          "id": "science_medium_06_a",
+          "text": "Earth’s Moon"
+        },
+        {
+          "id": "science_medium_06_b",
+          "text": "Ganymede"
+        },
+        {
+          "id": "science_medium_06_c",
+          "text": "Titan"
+        },
+        {
+          "id": "science_medium_06_d",
+          "text": "Europa"
+        }
+      ],
+      "correctChoiceId": "science_medium_06_b",
+      "explanation": "NASA identifies Jupiter’s moon Ganymede as the largest.",
+      "sourceTitle": "Jupiter Facts | NASA",
+      "sourceUrl": "https://science.nasa.gov/jupiter/jupiter-facts/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_hard_01",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "About how long ago did NASA say the solar system formed?",
+      "choices": [
+        {
+          "id": "science_hard_01_a",
+          "text": "46 million years"
+        },
+        {
+          "id": "science_hard_01_b",
+          "text": "4.6 billion years"
+        },
+        {
+          "id": "science_hard_01_c",
+          "text": "460 million years"
+        },
+        {
+          "id": "science_hard_01_d",
+          "text": "46 billion years"
+        }
+      ],
+      "correctChoiceId": "science_hard_01_b",
+      "explanation": "NASA estimates formation at about 4.6 billion years ago.",
+      "sourceTitle": "Solar System Facts | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/solar-system-facts/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_hard_02",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which planet is the most distant from the Sun among the eight planets?",
+      "choices": [
+        {
+          "id": "science_hard_02_a",
+          "text": "Neptune"
+        },
+        {
+          "id": "science_hard_02_b",
+          "text": "Uranus"
+        },
+        {
+          "id": "science_hard_02_c",
+          "text": "Saturn"
+        },
+        {
+          "id": "science_hard_02_d",
+          "text": "Jupiter"
+        }
+      ],
+      "correctChoiceId": "science_hard_02_a",
+      "explanation": "Neptune is the eighth and most distant planet.",
+      "sourceTitle": "About the Planets | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/planets/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_hard_03",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "What is the main reason the first four planets are called terrestrial planets?",
+      "choices": [
+        {
+          "id": "science_hard_03_a",
+          "text": "They are the largest planets"
+        },
+        {
+          "id": "science_hard_03_b",
+          "text": "They have no moons"
+        },
+        {
+          "id": "science_hard_03_c",
+          "text": "They are made mostly of ice"
+        },
+        {
+          "id": "science_hard_03_d",
+          "text": "They have solid, rocky surfaces"
+        }
+      ],
+      "correctChoiceId": "science_hard_03_d",
+      "explanation": "NASA describes the inner four as small planets with solid rocky surfaces.",
+      "sourceTitle": "Solar System Facts | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/solar-system-facts/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_hard_04",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which planet’s moon Titan is larger than Mercury?",
+      "choices": [
+        {
+          "id": "science_hard_04_a",
+          "text": "Uranus"
+        },
+        {
+          "id": "science_hard_04_b",
+          "text": "Neptune"
+        },
+        {
+          "id": "science_hard_04_c",
+          "text": "Saturn"
+        },
+        {
+          "id": "science_hard_04_d",
+          "text": "Jupiter"
+        }
+      ],
+      "correctChoiceId": "science_hard_04_c",
+      "explanation": "Titan, the largest moon of Saturn, is larger than Mercury.",
+      "sourceTitle": "Titan Facts | NASA Science",
+      "sourceUrl": "https://science.nasa.gov/saturn/moons/titan/facts/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_hard_05",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which dwarf planet lies in the asteroid belt between Mars and Jupiter?",
+      "choices": [
+        {
+          "id": "science_hard_05_a",
+          "text": "Makemake"
+        },
+        {
+          "id": "science_hard_05_b",
+          "text": "Ceres"
+        },
+        {
+          "id": "science_hard_05_c",
+          "text": "Pluto"
+        },
+        {
+          "id": "science_hard_05_d",
+          "text": "Eris"
+        }
+      ],
+      "correctChoiceId": "science_hard_05_b",
+      "explanation": "Ceres is located in the asteroid belt between Mars and Jupiter.",
+      "sourceTitle": "About the Planets | NASA",
+      "sourceUrl": "https://science.nasa.gov/solar-system/planets/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "science_hard_06",
+      "categoryId": "science",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "In the water cycle, what process moves water from clouds back to Earth’s surface?",
+      "choices": [
+        {
+          "id": "science_hard_06_a",
+          "text": "Precipitation"
+        },
+        {
+          "id": "science_hard_06_b",
+          "text": "Condensation"
+        },
+        {
+          "id": "science_hard_06_c",
+          "text": "Evaporation"
+        },
+        {
+          "id": "science_hard_06_d",
+          "text": "Transpiration"
+        }
+      ],
+      "correctChoiceId": "science_hard_06_a",
+      "explanation": "Rain and snow are forms of precipitation.",
+      "sourceTitle": "The Water Cycle | NOAA",
+      "sourceUrl": "https://www.noaa.gov/education/resource-collections/freshwater/water-cycle",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_easy_01",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What does HTML stand for?",
+      "choices": [
+        {
+          "id": "technology_easy_01_a",
+          "text": "Home Tool Markup Link"
+        },
+        {
+          "id": "technology_easy_01_b",
+          "text": "Hyperlink Text Management Language"
+        },
+        {
+          "id": "technology_easy_01_c",
+          "text": "HyperText Markup Language"
+        },
+        {
+          "id": "technology_easy_01_d",
+          "text": "High Transfer Machine Language"
+        }
+      ],
+      "correctChoiceId": "technology_easy_01_c",
+      "explanation": "HTML is short for HyperText Markup Language.",
+      "sourceTitle": "HTML Glossary | MDN",
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Glossary/HTML",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_easy_02",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What is HTML mainly used to define on a web page?",
+      "choices": [
+        {
+          "id": "technology_easy_02_a",
+          "text": "Wireless signal strength"
+        },
+        {
+          "id": "technology_easy_02_b",
+          "text": "Structure and meaning of content"
+        },
+        {
+          "id": "technology_easy_02_c",
+          "text": "Electrical voltage"
+        },
+        {
+          "id": "technology_easy_02_d",
+          "text": "A computer’s physical memory"
+        }
+      ],
+      "correctChoiceId": "technology_easy_02_b",
+      "explanation": "HTML elements structure and label page content.",
+      "sourceTitle": "The Web Standards Model | MDN",
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_easy_03",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What does CSS mainly control on a web page?",
+      "choices": [
+        {
+          "id": "technology_easy_03_a",
+          "text": "Visual styles and layout"
+        },
+        {
+          "id": "technology_easy_03_b",
+          "text": "The computer’s power supply"
+        },
+        {
+          "id": "technology_easy_03_c",
+          "text": "The web address registry"
+        },
+        {
+          "id": "technology_easy_03_d",
+          "text": "The keyboard layout"
+        }
+      ],
+      "correctChoiceId": "technology_easy_03_a",
+      "explanation": "CSS applies styles such as colors, fonts, and layout.",
+      "sourceTitle": "The Web Standards Model | MDN",
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_easy_04",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which of these is a programming language?",
+      "choices": [
+        {
+          "id": "technology_easy_04_a",
+          "text": "HTML"
+        },
+        {
+          "id": "technology_easy_04_b",
+          "text": "JPEG"
+        },
+        {
+          "id": "technology_easy_04_c",
+          "text": "USB"
+        },
+        {
+          "id": "technology_easy_04_d",
+          "text": "Python"
+        }
+      ],
+      "correctChoiceId": "technology_easy_04_d",
+      "explanation": "Python is a high-level programming language.",
+      "sourceTitle": "What Is Python? | Python.org",
+      "sourceUrl": "https://www.python.org/doc/essays/blurb/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_easy_05",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What kind of material is used in the first demonstrated point-contact transistor described by CHM?",
+      "choices": [
+        {
+          "id": "technology_easy_05_a",
+          "text": "Copper wire only"
+        },
+        {
+          "id": "technology_easy_05_b",
+          "text": "Glass"
+        },
+        {
+          "id": "technology_easy_05_c",
+          "text": "Germanium"
+        },
+        {
+          "id": "technology_easy_05_d",
+          "text": "Wood"
+        }
+      ],
+      "correctChoiceId": "technology_easy_05_c",
+      "explanation": "The device used a small slab of high-purity germanium.",
+      "sourceTitle": "Inventing the Transistor | Computer History Museum",
+      "sourceUrl": "https://www.computerhistory.org/revolution/story/273",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_easy_06",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What does a transistor commonly help electronic circuits do?",
+      "choices": [
+        {
+          "id": "technology_easy_06_a",
+          "text": "Measure distance with a ruler"
+        },
+        {
+          "id": "technology_easy_06_b",
+          "text": "Switch or amplify signals"
+        },
+        {
+          "id": "technology_easy_06_c",
+          "text": "Print paper"
+        },
+        {
+          "id": "technology_easy_06_d",
+          "text": "Store water"
+        }
+      ],
+      "correctChoiceId": "technology_easy_06_b",
+      "explanation": "Transistors can function as electronic switches and amplifiers.",
+      "sourceTitle": "Inventing the Transistor | Computer History Museum",
+      "sourceUrl": "https://www.computerhistory.org/revolution/story/273",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_medium_01",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Who created Python in the early 1990s?",
+      "choices": [
+        {
+          "id": "technology_medium_01_a",
+          "text": "James Gosling"
+        },
+        {
+          "id": "technology_medium_01_b",
+          "text": "Guido van Rossum"
+        },
+        {
+          "id": "technology_medium_01_c",
+          "text": "Tim Berners-Lee"
+        },
+        {
+          "id": "technology_medium_01_d",
+          "text": "Grace Hopper"
+        }
+      ],
+      "correctChoiceId": "technology_medium_01_b",
+      "explanation": "Python was created by Guido van Rossum.",
+      "sourceTitle": "History and License | Python Documentation",
+      "sourceUrl": "https://docs.python.org/3.10/license.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_medium_02",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "In which country was Python first created at CWI?",
+      "choices": [
+        {
+          "id": "technology_medium_02_a",
+          "text": "The Netherlands"
+        },
+        {
+          "id": "technology_medium_02_b",
+          "text": "Japan"
+        },
+        {
+          "id": "technology_medium_02_c",
+          "text": "Brazil"
+        },
+        {
+          "id": "technology_medium_02_d",
+          "text": "Canada"
+        }
+      ],
+      "correctChoiceId": "technology_medium_02_a",
+      "explanation": "CWI is in the Netherlands.",
+      "sourceTitle": "History and License | Python Documentation",
+      "sourceUrl": "https://docs.python.org/3.10/license.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_medium_03",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which three technologies are described as the main building blocks of many websites by MDN?",
+      "choices": [
+        {
+          "id": "technology_medium_03_a",
+          "text": "Python, C, and SQL"
+        },
+        {
+          "id": "technology_medium_03_b",
+          "text": "USB, HDMI, and Wi-Fi"
+        },
+        {
+          "id": "technology_medium_03_c",
+          "text": "JPEG, PNG, and GIF"
+        },
+        {
+          "id": "technology_medium_03_d",
+          "text": "HTML, CSS, and JavaScript"
+        }
+      ],
+      "correctChoiceId": "technology_medium_03_d",
+      "explanation": "MDN introduces HTML, CSS, and JavaScript as core web technologies.",
+      "sourceTitle": "The Web Standards Model | MDN",
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_medium_04",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What is one purpose of semantic HTML elements?",
+      "choices": [
+        {
+          "id": "technology_medium_04_a",
+          "text": "Encrypt a Wi-Fi password"
+        },
+        {
+          "id": "technology_medium_04_b",
+          "text": "Increase screen brightness"
+        },
+        {
+          "id": "technology_medium_04_c",
+          "text": "Give content structure and meaning"
+        },
+        {
+          "id": "technology_medium_04_d",
+          "text": "Compress a video file"
+        }
+      ],
+      "correctChoiceId": "technology_medium_04_c",
+      "explanation": "HTML elements mark up content to give it structure and meaning.",
+      "sourceTitle": "The Web Standards Model | MDN",
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_medium_05",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Who demonstrated the first semiconductor amplifier using a point-contact transistor at Bell Labs?",
+      "choices": [
+        {
+          "id": "technology_medium_05_a",
+          "text": "Tim Berners-Lee and Vint Cerf"
+        },
+        {
+          "id": "technology_medium_05_b",
+          "text": "John Bardeen and Walter Brattain"
+        },
+        {
+          "id": "technology_medium_05_c",
+          "text": "Jack Kilby and Robert Noyce"
+        },
+        {
+          "id": "technology_medium_05_d",
+          "text": "Ada Lovelace and Charles Babbage"
+        }
+      ],
+      "correctChoiceId": "technology_medium_05_b",
+      "explanation": "Bardeen and Brattain demonstrated the device in 1947.",
+      "sourceTitle": "Inventing the Transistor | Computer History Museum",
+      "sourceUrl": "https://www.computerhistory.org/revolution/story/273",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_medium_06",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What name did electrical engineer John Pierce give the new device?",
+      "choices": [
+        {
+          "id": "technology_medium_06_a",
+          "text": "Transistor"
+        },
+        {
+          "id": "technology_medium_06_b",
+          "text": "Microchip"
+        },
+        {
+          "id": "technology_medium_06_c",
+          "text": "Web browser"
+        },
+        {
+          "id": "technology_medium_06_d",
+          "text": "Photocell"
+        }
+      ],
+      "correctChoiceId": "technology_medium_06_a",
+      "explanation": "Electrical engineer John Pierce named the device the transistor.",
+      "sourceTitle": "Invention of the Point-Contact Transistor | Computer History Museum",
+      "sourceUrl": "https://www.computerhistory.org/siliconengine/invention-of-the-point-contact-transistor/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_hard_01",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "On what date did Jack Kilby test his first working integrated circuit?",
+      "choices": [
+        {
+          "id": "technology_hard_01_a",
+          "text": "September 12, 1958"
+        },
+        {
+          "id": "technology_hard_01_b",
+          "text": "December 16, 1947"
+        },
+        {
+          "id": "technology_hard_01_c",
+          "text": "June 30, 1948"
+        },
+        {
+          "id": "technology_hard_01_d",
+          "text": "January 1, 1965"
+        }
+      ],
+      "correctChoiceId": "technology_hard_01_a",
+      "explanation": "The Computer History Museum records the test on September 12, 1958.",
+      "sourceTitle": "The Integrated Circuit | Computer History Museum",
+      "sourceUrl": "https://www.computerhistory.org/revolution/digital-revolution/12/276",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_hard_02",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which material was used for Jack Kilby’s first working integrated circuit?",
+      "choices": [
+        {
+          "id": "technology_hard_02_a",
+          "text": "Silicon carbide"
+        },
+        {
+          "id": "technology_hard_02_b",
+          "text": "Aluminum"
+        },
+        {
+          "id": "technology_hard_02_c",
+          "text": "Gallium nitride"
+        },
+        {
+          "id": "technology_hard_02_d",
+          "text": "Germanium"
+        }
+      ],
+      "correctChoiceId": "technology_hard_02_d",
+      "explanation": "CHM says the first circuit was etched on germanium.",
+      "sourceTitle": "The Integrated Circuit | Computer History Museum",
+      "sourceUrl": "https://www.computerhistory.org/revolution/digital-revolution/12/276",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_hard_03",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Who is credited alongside Jack Kilby as a co-inventor of the integrated circuit?",
+      "choices": [
+        {
+          "id": "technology_hard_03_a",
+          "text": "Walter Brattain"
+        },
+        {
+          "id": "technology_hard_03_b",
+          "text": "Guido van Rossum"
+        },
+        {
+          "id": "technology_hard_03_c",
+          "text": "Robert Noyce"
+        },
+        {
+          "id": "technology_hard_03_d",
+          "text": "John Pierce"
+        }
+      ],
+      "correctChoiceId": "technology_hard_03_c",
+      "explanation": "Kilby and Noyce are celebrated as co-inventors of the IC.",
+      "sourceTitle": "1959: Practical Monolithic Integrated Circuit Concept Patented | Computer History Museum",
+      "sourceUrl": "https://www.computerhistory.org/siliconengine/practical-monolithic-integrated-circuit-concept-patented/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_hard_04",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "What does CSS stand for?",
+      "choices": [
+        {
+          "id": "technology_hard_04_a",
+          "text": "Color Selection Software"
+        },
+        {
+          "id": "technology_hard_04_b",
+          "text": "Cascading Style Sheets"
+        },
+        {
+          "id": "technology_hard_04_c",
+          "text": "Computer Screen System"
+        },
+        {
+          "id": "technology_hard_04_d",
+          "text": "Central Script Syntax"
+        }
+      ],
+      "correctChoiceId": "technology_hard_04_b",
+      "explanation": "CSS is the abbreviation for Cascading Style Sheets.",
+      "sourceTitle": "The Web Standards Model | MDN",
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_hard_05",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which HTML element is an example of a void element that does not enclose text?",
+      "choices": [
+        {
+          "id": "technology_hard_05_a",
+          "text": "img"
+        },
+        {
+          "id": "technology_hard_05_b",
+          "text": "article"
+        },
+        {
+          "id": "technology_hard_05_c",
+          "text": "p"
+        },
+        {
+          "id": "technology_hard_05_d",
+          "text": "strong"
+        }
+      ],
+      "correctChoiceId": "technology_hard_05_a",
+      "explanation": "MDN lists img as a void element.",
+      "sourceTitle": "HTML Glossary | MDN",
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Glossary/HTML",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "technology_hard_06",
+      "categoryId": "technology",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "In what year did Bell Labs publicly announce the point-contact transistor?",
+      "choices": [
+        {
+          "id": "technology_hard_06_a",
+          "text": "1938"
+        },
+        {
+          "id": "technology_hard_06_b",
+          "text": "1958"
+        },
+        {
+          "id": "technology_hard_06_c",
+          "text": "1968"
+        },
+        {
+          "id": "technology_hard_06_d",
+          "text": "1948"
+        }
+      ],
+      "correctChoiceId": "technology_hard_06_d",
+      "explanation": "The announcement was made at a press conference in June 1948.",
+      "sourceTitle": "Inventing the Transistor | Computer History Museum",
+      "sourceUrl": "https://www.computerhistory.org/revolution/story/273",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_easy_01",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which document did the Continental Congress adopt on July 4, 1776?",
+      "choices": [
+        {
+          "id": "history_easy_01_a",
+          "text": "The Emancipation Proclamation"
+        },
+        {
+          "id": "history_easy_01_b",
+          "text": "The Declaration of Independence"
+        },
+        {
+          "id": "history_easy_01_c",
+          "text": "The Bill of Rights"
+        },
+        {
+          "id": "history_easy_01_d",
+          "text": "The Articles of Confederation"
+        }
+      ],
+      "correctChoiceId": "history_easy_01_b",
+      "explanation": "The National Archives records adoption on July 4, 1776.",
+      "sourceTitle": "Declaration of Independence (1776) | National Archives",
+      "sourceUrl": "https://www.archives.gov/milestone-documents/declaration-of-independence",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_easy_02",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which brothers made the first sustained powered flight at Kitty Hawk in 1903?",
+      "choices": [
+        {
+          "id": "history_easy_02_a",
+          "text": "Orville and Wilbur Wright"
+        },
+        {
+          "id": "history_easy_02_b",
+          "text": "The Montgolfier brothers"
+        },
+        {
+          "id": "history_easy_02_c",
+          "text": "The Lumière brothers"
+        },
+        {
+          "id": "history_easy_02_d",
+          "text": "The Grimm brothers"
+        }
+      ],
+      "correctChoiceId": "history_easy_02_a",
+      "explanation": "The Library of Congress documents the Wright brothers’ flight.",
+      "sourceTitle": "First Flight | Library of Congress",
+      "sourceUrl": "https://www.loc.gov/item/today-in-history/december-17",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_easy_03",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which wall dividing East and West Berlin was opened on 9 November 1989?",
+      "choices": [
+        {
+          "id": "history_easy_03_a",
+          "text": "Hadrian’s Wall"
+        },
+        {
+          "id": "history_easy_03_b",
+          "text": "Great Wall of China"
+        },
+        {
+          "id": "history_easy_03_c",
+          "text": "Western Wall"
+        },
+        {
+          "id": "history_easy_03_d",
+          "text": "Berlin Wall"
+        }
+      ],
+      "correctChoiceId": "history_easy_03_d",
+      "explanation": "The Berlin Wall, which divided East and West Berlin, was opened on 9 November 1989.",
+      "sourceTitle": "Fall of Communism in Eastern Europe, 1989 | U.S. Department of State",
+      "sourceUrl": "https://history.state.gov/milestones/1989-1992/fall-of-communism",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_easy_04",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which ancient civilization built Machu Picchu?",
+      "choices": [
+        {
+          "id": "history_easy_04_a",
+          "text": "Minoan"
+        },
+        {
+          "id": "history_easy_04_b",
+          "text": "Phoenician"
+        },
+        {
+          "id": "history_easy_04_c",
+          "text": "Inca"
+        },
+        {
+          "id": "history_easy_04_d",
+          "text": "Roman"
+        }
+      ],
+      "correctChoiceId": "history_easy_04_c",
+      "explanation": "UNESCO identifies Machu Picchu as a legacy of the Inca civilization.",
+      "sourceTitle": "Historic Sanctuary of Machu Picchu | UNESCO World Heritage Centre",
+      "sourceUrl": "https://whc.unesco.org/en/list/274",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_easy_05",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Where was the Gutenberg Bible printed?",
+      "choices": [
+        {
+          "id": "history_easy_05_a",
+          "text": "Kyoto"
+        },
+        {
+          "id": "history_easy_05_b",
+          "text": "Mainz"
+        },
+        {
+          "id": "history_easy_05_c",
+          "text": "Athens"
+        },
+        {
+          "id": "history_easy_05_d",
+          "text": "Cairo"
+        }
+      ],
+      "correctChoiceId": "history_easy_05_b",
+      "explanation": "The Bible was probably completed in Mainz, Germany.",
+      "sourceTitle": "The Gutenberg Bible | Library of Congress",
+      "sourceUrl": "https://wwws.loc.gov/exhibits/bibles/the-gutenberg-bible.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_easy_06",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "In what year was the United Nations founded?",
+      "choices": [
+        {
+          "id": "history_easy_06_a",
+          "text": "1945"
+        },
+        {
+          "id": "history_easy_06_b",
+          "text": "1914"
+        },
+        {
+          "id": "history_easy_06_c",
+          "text": "1776"
+        },
+        {
+          "id": "history_easy_06_d",
+          "text": "2001"
+        }
+      ],
+      "correctChoiceId": "history_easy_06_a",
+      "explanation": "The UN was founded in 1945.",
+      "sourceTitle": "About Us | United Nations",
+      "sourceUrl": "https://www.un.org/en/about-us",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_medium_01",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Who was principally responsible for drafting the Declaration of Independence?",
+      "choices": [
+        {
+          "id": "history_medium_01_a",
+          "text": "Thomas Jefferson"
+        },
+        {
+          "id": "history_medium_01_b",
+          "text": "George Washington"
+        },
+        {
+          "id": "history_medium_01_c",
+          "text": "James Madison"
+        },
+        {
+          "id": "history_medium_01_d",
+          "text": "Alexander Hamilton"
+        }
+      ],
+      "correctChoiceId": "history_medium_01_a",
+      "explanation": "The National Archives identifies Jefferson as the actual writer.",
+      "sourceTitle": "Declaration of Independence (1776) | National Archives",
+      "sourceUrl": "https://www.archives.gov/milestone-documents/declaration-of-independence",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_medium_02",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "How many amendments make up the U.S. Bill of Rights?",
+      "choices": [
+        {
+          "id": "history_medium_02_a",
+          "text": "Five"
+        },
+        {
+          "id": "history_medium_02_b",
+          "text": "Twelve"
+        },
+        {
+          "id": "history_medium_02_c",
+          "text": "Twenty-seven"
+        },
+        {
+          "id": "history_medium_02_d",
+          "text": "Ten"
+        }
+      ],
+      "correctChoiceId": "history_medium_02_d",
+      "explanation": "The Bill of Rights consists of the first ten amendments.",
+      "sourceTitle": "Bill of Rights (1791) | National Archives",
+      "sourceUrl": "https://www.archives.gov/milestone-documents/bill-of-rights",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_medium_03",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Under Article VII, how many states had to ratify the U.S. Constitution for it to take effect among those states?",
+      "choices": [
+        {
+          "id": "history_medium_03_a",
+          "text": "Seven"
+        },
+        {
+          "id": "history_medium_03_b",
+          "text": "Nine"
+        },
+        {
+          "id": "history_medium_03_c",
+          "text": "Ten"
+        },
+        {
+          "id": "history_medium_03_d",
+          "text": "Thirteen"
+        }
+      ],
+      "correctChoiceId": "history_medium_03_b",
+      "explanation": "Article VII states that ratification by conventions in nine states was sufficient to establish the Constitution among the states ratifying it.",
+      "sourceTitle": "The Constitution: A Transcription | National Archives",
+      "sourceUrl": "https://www.archives.gov/founding-docs/constitution-transcript",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_medium_04",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which English king sealed Magna Carta at Runnymede in 1215?",
+      "choices": [
+        {
+          "id": "history_medium_04_a",
+          "text": "Henry II"
+        },
+        {
+          "id": "history_medium_04_b",
+          "text": "Richard I"
+        },
+        {
+          "id": "history_medium_04_c",
+          "text": "King John"
+        },
+        {
+          "id": "history_medium_04_d",
+          "text": "Edward I"
+        }
+      ],
+      "correctChoiceId": "history_medium_04_c",
+      "explanation": "The British Library identifies the 15 June 1215 Runnymede charter as the Magna Carta of King John.",
+      "sourceTitle": "Magna Carta, 1215 | British Library",
+      "sourceUrl": "https://searcharchives.bl.uk/catalog/040-001102110",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_medium_05",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which dynasty continued construction of the Great Wall of China up to its period?",
+      "choices": [
+        {
+          "id": "history_medium_05_a",
+          "text": "Ming"
+        },
+        {
+          "id": "history_medium_05_b",
+          "text": "Mughal"
+        },
+        {
+          "id": "history_medium_05_c",
+          "text": "Tudor"
+        },
+        {
+          "id": "history_medium_05_d",
+          "text": "Ottoman"
+        }
+      ],
+      "correctChoiceId": "history_medium_05_a",
+      "explanation": "UNESCO notes construction continued up to the Ming dynasty.",
+      "sourceTitle": "The Great Wall | UNESCO World Heritage Centre",
+      "sourceUrl": "https://whc.unesco.org/en/list/438",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_medium_06",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "In which century was Machu Picchu built?",
+      "choices": [
+        {
+          "id": "history_medium_06_a",
+          "text": "Ninth century"
+        },
+        {
+          "id": "history_medium_06_b",
+          "text": "Eighteenth century"
+        },
+        {
+          "id": "history_medium_06_c",
+          "text": "Twentieth century"
+        },
+        {
+          "id": "history_medium_06_d",
+          "text": "Fifteenth century"
+        }
+      ],
+      "correctChoiceId": "history_medium_06_d",
+      "explanation": "UNESCO dates its construction to the fifteenth century.",
+      "sourceTitle": "Historic Sanctuary of Machu Picchu | UNESCO World Heritage Centre",
+      "sourceUrl": "https://whc.unesco.org/en/list/274",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_hard_01",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "How long did Orville Wright’s first flight last?",
+      "choices": [
+        {
+          "id": "history_hard_01_a",
+          "text": "3 seconds"
+        },
+        {
+          "id": "history_hard_01_b",
+          "text": "59 seconds"
+        },
+        {
+          "id": "history_hard_01_c",
+          "text": "2 minutes"
+        },
+        {
+          "id": "history_hard_01_d",
+          "text": "12 seconds"
+        }
+      ],
+      "correctChoiceId": "history_hard_01_d",
+      "explanation": "The Library of Congress records a 12-second first flight.",
+      "sourceTitle": "First Flight | Library of Congress",
+      "sourceUrl": "https://www.loc.gov/item/today-in-history/december-17",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_hard_02",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "How far did Orville Wright travel on that first flight?",
+      "choices": [
+        {
+          "id": "history_hard_02_a",
+          "text": "1,200 feet"
+        },
+        {
+          "id": "history_hard_02_b",
+          "text": "59 feet"
+        },
+        {
+          "id": "history_hard_02_c",
+          "text": "120 feet"
+        },
+        {
+          "id": "history_hard_02_d",
+          "text": "852 feet"
+        }
+      ],
+      "correctChoiceId": "history_hard_02_c",
+      "explanation": "The first flight covered 120 feet.",
+      "sourceTitle": "First Flight | Library of Congress",
+      "sourceUrl": "https://www.loc.gov/item/today-in-history/december-17",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_hard_03",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "On what date was the U.S. Constitution signed by delegates?",
+      "choices": [
+        {
+          "id": "history_hard_03_a",
+          "text": "August 2, 1776"
+        },
+        {
+          "id": "history_hard_03_b",
+          "text": "September 17, 1787"
+        },
+        {
+          "id": "history_hard_03_c",
+          "text": "July 4, 1776"
+        },
+        {
+          "id": "history_hard_03_d",
+          "text": "December 15, 1791"
+        }
+      ],
+      "correctChoiceId": "history_hard_03_b",
+      "explanation": "The National Archives dates signing to September 17, 1787.",
+      "sourceTitle": "The Constitution of the United States | National Archives",
+      "sourceUrl": "https://www.archives.gov/founding-docs/constitution-transcript",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_hard_04",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "In what year was the Gutenberg Bible probably completed?",
+      "choices": [
+        {
+          "id": "history_hard_04_a",
+          "text": "1455"
+        },
+        {
+          "id": "history_hard_04_b",
+          "text": "1255"
+        },
+        {
+          "id": "history_hard_04_c",
+          "text": "1555"
+        },
+        {
+          "id": "history_hard_04_d",
+          "text": "1655"
+        }
+      ],
+      "correctChoiceId": "history_hard_04_a",
+      "explanation": "The Library of Congress says it was probably completed late in 1455.",
+      "sourceTitle": "The Gutenberg Bible | Library of Congress",
+      "sourceUrl": "https://wwws.loc.gov/exhibits/bibles/the-gutenberg-bible.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_hard_05",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which historical event did the fall of the Berlin Wall come to symbolize?",
+      "choices": [
+        {
+          "id": "history_hard_05_a",
+          "text": "The start of World War I"
+        },
+        {
+          "id": "history_hard_05_b",
+          "text": "The founding of the Roman Empire"
+        },
+        {
+          "id": "history_hard_05_c",
+          "text": "The beginning of the Renaissance"
+        },
+        {
+          "id": "history_hard_05_d",
+          "text": "The end of the Cold War"
+        }
+      ],
+      "correctChoiceId": "history_hard_05_d",
+      "explanation": "The U.S. State Department describes it as a symbol of the Cold War’s end.",
+      "sourceTitle": "Fall of Communism in Eastern Europe, 1989 | U.S. Department of State",
+      "sourceUrl": "https://history.state.gov/milestones/1989-1992/fall-of-communism",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "history_hard_06",
+      "categoryId": "history",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "In which city was the World Heritage Convention adopted?",
+      "choices": [
+        {
+          "id": "history_hard_06_a",
+          "text": "New York"
+        },
+        {
+          "id": "history_hard_06_b",
+          "text": "Geneva"
+        },
+        {
+          "id": "history_hard_06_c",
+          "text": "Paris"
+        },
+        {
+          "id": "history_hard_06_d",
+          "text": "Rome"
+        }
+      ],
+      "correctChoiceId": "history_hard_06_c",
+      "explanation": "UNESCO adopted the convention in Paris.",
+      "sourceTitle": "Convention Concerning the Protection of World Cultural and Natural Heritage | UNESCO",
+      "sourceUrl": "https://www.unesco.org/en/legal-affairs/convention-concerning-protection-world-cultural-and-natural-heritage",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_easy_01",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which imaginary line divides Earth into the Northern and Southern Hemispheres?",
+      "choices": [
+        {
+          "id": "geography_easy_01_a",
+          "text": "Equator"
+        },
+        {
+          "id": "geography_easy_01_b",
+          "text": "Prime Meridian"
+        },
+        {
+          "id": "geography_easy_01_c",
+          "text": "Tropic of Cancer"
+        },
+        {
+          "id": "geography_easy_01_d",
+          "text": "International Date Line"
+        }
+      ],
+      "correctChoiceId": "geography_easy_01_a",
+      "explanation": "The Equator is at zero degrees latitude.",
+      "sourceTitle": "Hemisphere | National Geographic",
+      "sourceUrl": "https://education.nationalgeographic.org/resource/hemisphere/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_easy_02",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "How many continents does National Geographic recognize?",
+      "choices": [
+        {
+          "id": "geography_easy_02_a",
+          "text": "Five"
+        },
+        {
+          "id": "geography_easy_02_b",
+          "text": "Six"
+        },
+        {
+          "id": "geography_easy_02_c",
+          "text": "Eight"
+        },
+        {
+          "id": "geography_easy_02_d",
+          "text": "Seven"
+        }
+      ],
+      "correctChoiceId": "geography_easy_02_d",
+      "explanation": "National Geographic recognizes seven continents.",
+      "sourceTitle": "National Geographic Map Policy",
+      "sourceUrl": "https://www.nationalgeographic.org/national-geographic-map-policy",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_easy_03",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which ocean is the largest?",
+      "choices": [
+        {
+          "id": "geography_easy_03_a",
+          "text": "Indian Ocean"
+        },
+        {
+          "id": "geography_easy_03_b",
+          "text": "Arctic Ocean"
+        },
+        {
+          "id": "geography_easy_03_c",
+          "text": "Pacific Ocean"
+        },
+        {
+          "id": "geography_easy_03_d",
+          "text": "Atlantic Ocean"
+        }
+      ],
+      "correctChoiceId": "geography_easy_03_c",
+      "explanation": "The Pacific is one of the five principal ocean regions and the largest.",
+      "sourceTitle": "All About the Ocean | National Geographic",
+      "sourceUrl": "https://education.nationalgeographic.org/resource/all-about-the-ocean/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_easy_04",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What is the capital of Australia?",
+      "choices": [
+        {
+          "id": "geography_easy_04_a",
+          "text": "Perth"
+        },
+        {
+          "id": "geography_easy_04_b",
+          "text": "Canberra"
+        },
+        {
+          "id": "geography_easy_04_c",
+          "text": "Sydney"
+        },
+        {
+          "id": "geography_easy_04_d",
+          "text": "Melbourne"
+        }
+      ],
+      "correctChoiceId": "geography_easy_04_b",
+      "explanation": "Canberra became the Australian national capital after Parliament selected its site in 1908.",
+      "sourceTitle": "Canberra: Seat of Government | National Capital Authority",
+      "sourceUrl": "https://www.nca.gov.au/education/canberras-history/canberra-seat-government",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_easy_05",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which continent contains the Sahara Desert?",
+      "choices": [
+        {
+          "id": "geography_easy_05_a",
+          "text": "Africa"
+        },
+        {
+          "id": "geography_easy_05_b",
+          "text": "Asia"
+        },
+        {
+          "id": "geography_easy_05_c",
+          "text": "South America"
+        },
+        {
+          "id": "geography_easy_05_d",
+          "text": "Europe"
+        }
+      ],
+      "correctChoiceId": "geography_easy_05_a",
+      "explanation": "The Sahara is in northern Africa.",
+      "sourceTitle": "Desert | National Geographic Education",
+      "sourceUrl": "https://education.nationalgeographic.org/resource/desert/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_easy_06",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which ocean lies between Africa and Australia?",
+      "choices": [
+        {
+          "id": "geography_easy_06_a",
+          "text": "Atlantic Ocean"
+        },
+        {
+          "id": "geography_easy_06_b",
+          "text": "Arctic Ocean"
+        },
+        {
+          "id": "geography_easy_06_c",
+          "text": "Southern Ocean"
+        },
+        {
+          "id": "geography_easy_06_d",
+          "text": "Indian Ocean"
+        }
+      ],
+      "correctChoiceId": "geography_easy_06_d",
+      "explanation": "The Indian Ocean lies between Africa and Australia.",
+      "sourceTitle": "All About the Ocean | National Geographic",
+      "sourceUrl": "https://education.nationalgeographic.org/resource/all-about-the-ocean/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_medium_01",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which is the highest point on Earth above sea level?",
+      "choices": [
+        {
+          "id": "geography_medium_01_a",
+          "text": "K2"
+        },
+        {
+          "id": "geography_medium_01_b",
+          "text": "Kilimanjaro"
+        },
+        {
+          "id": "geography_medium_01_c",
+          "text": "Denali"
+        },
+        {
+          "id": "geography_medium_01_d",
+          "text": "Mount Everest"
+        }
+      ],
+      "correctChoiceId": "geography_medium_01_d",
+      "explanation": "The CIA physical-world reference lists Mount Everest as the highest point.",
+      "sourceTitle": "The Physical World | CIA World Factbook",
+      "sourceUrl": "https://www.cia.gov/the-world-factbook/static/6c4d9b9a41b27707b6720720df7161d6/Physical_World.pdf",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_medium_02",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which river carved the Grand Canyon over millions of years?",
+      "choices": [
+        {
+          "id": "geography_medium_02_a",
+          "text": "Amazon River"
+        },
+        {
+          "id": "geography_medium_02_b",
+          "text": "Danube River"
+        },
+        {
+          "id": "geography_medium_02_c",
+          "text": "Colorado River"
+        },
+        {
+          "id": "geography_medium_02_d",
+          "text": "Mississippi River"
+        }
+      ],
+      "correctChoiceId": "geography_medium_02_c",
+      "explanation": "USGS describes the Colorado River as carving the canyon.",
+      "sourceTitle": "Geology of Grand Canyon National Park | U.S. Geological Survey",
+      "sourceUrl": "https://www.usgs.gov/geology-and-ecology-of-national-parks/geology-grand-canyon-national-park",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_medium_03",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which country has the capital city Brasília?",
+      "choices": [
+        {
+          "id": "geography_medium_03_a",
+          "text": "Peru"
+        },
+        {
+          "id": "geography_medium_03_b",
+          "text": "Brazil"
+        },
+        {
+          "id": "geography_medium_03_c",
+          "text": "Argentina"
+        },
+        {
+          "id": "geography_medium_03_d",
+          "text": "Chile"
+        }
+      ],
+      "correctChoiceId": "geography_medium_03_b",
+      "explanation": "Brasília is the capital of Brazil and the seat of the federal government.",
+      "sourceTitle": "Brasília - DF | Government of Brazil",
+      "sourceUrl": "https://www.gov.br/g20/en/about-the-g20/host-cities/brasilia-df",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_medium_04",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What is the deepest lake listed in the CIA physical-world reference?",
+      "choices": [
+        {
+          "id": "geography_medium_04_a",
+          "text": "Lake Baikal"
+        },
+        {
+          "id": "geography_medium_04_b",
+          "text": "Lake Superior"
+        },
+        {
+          "id": "geography_medium_04_c",
+          "text": "Lake Victoria"
+        },
+        {
+          "id": "geography_medium_04_d",
+          "text": "Lake Titicaca"
+        }
+      ],
+      "correctChoiceId": "geography_medium_04_a",
+      "explanation": "The reference lists Lake Baikal as the deepest lake.",
+      "sourceTitle": "The Physical World | CIA World Factbook",
+      "sourceUrl": "https://www.cia.gov/the-world-factbook/static/6c4d9b9a41b27707b6720720df7161d6/Physical_World.pdf",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_medium_05",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which continent is crossed by the Equator and is the second largest?",
+      "choices": [
+        {
+          "id": "geography_medium_05_a",
+          "text": "Europe"
+        },
+        {
+          "id": "geography_medium_05_b",
+          "text": "Australia"
+        },
+        {
+          "id": "geography_medium_05_c",
+          "text": "Antarctica"
+        },
+        {
+          "id": "geography_medium_05_d",
+          "text": "Africa"
+        }
+      ],
+      "correctChoiceId": "geography_medium_05_d",
+      "explanation": "National Geographic describes Africa as the second-largest continent and crossed by the Equator.",
+      "sourceTitle": "Africa: Physical Geography | National Geographic Education",
+      "sourceUrl": "https://education.nationalgeographic.org/resource/africa-physical-geography/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_medium_06",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which river is listed by USGS as the longest in North America?",
+      "choices": [
+        {
+          "id": "geography_medium_06_a",
+          "text": "Ohio River"
+        },
+        {
+          "id": "geography_medium_06_b",
+          "text": "Hudson River"
+        },
+        {
+          "id": "geography_medium_06_c",
+          "text": "Missouri River"
+        },
+        {
+          "id": "geography_medium_06_d",
+          "text": "Colorado River"
+        }
+      ],
+      "correctChoiceId": "geography_medium_06_c",
+      "explanation": "USGS lists the Missouri as the longest in North America.",
+      "sourceTitle": "Rivers of the World | U.S. Geological Survey",
+      "sourceUrl": "https://www.usgs.gov/water-science-school/science/rivers-world-worlds-longest-rivers",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_hard_01",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "What is the approximate equatorial circumference of Earth in the CIA reference?",
+      "choices": [
+        {
+          "id": "geography_hard_01_a",
+          "text": "12,756 km"
+        },
+        {
+          "id": "geography_hard_01_b",
+          "text": "510,072 km"
+        },
+        {
+          "id": "geography_hard_01_c",
+          "text": "40,075 km"
+        },
+        {
+          "id": "geography_hard_01_d",
+          "text": "24,901 km"
+        }
+      ],
+      "correctChoiceId": "geography_hard_01_c",
+      "explanation": "The CIA physical-world reference lists 40,075 km.",
+      "sourceTitle": "The Physical World | CIA World Factbook",
+      "sourceUrl": "https://www.cia.gov/the-world-factbook/static/6c4d9b9a41b27707b6720720df7161d6/Physical_World.pdf",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_hard_02",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which ocean surrounds Antarctica and is recognized as the fifth ocean by National Geographic?",
+      "choices": [
+        {
+          "id": "geography_hard_02_a",
+          "text": "Atlantic Ocean"
+        },
+        {
+          "id": "geography_hard_02_b",
+          "text": "Southern Ocean"
+        },
+        {
+          "id": "geography_hard_02_c",
+          "text": "Arctic Ocean"
+        },
+        {
+          "id": "geography_hard_02_d",
+          "text": "Indian Ocean"
+        }
+      ],
+      "correctChoiceId": "geography_hard_02_b",
+      "explanation": "National Geographic recognizes the Southern Ocean as the fifth region.",
+      "sourceTitle": "National Geographic Map Policy",
+      "sourceUrl": "https://www.nationalgeographic.org/national-geographic-map-policy",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_hard_03",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which is the largest island in the world, according to the CIA physical-world reference?",
+      "choices": [
+        {
+          "id": "geography_hard_03_a",
+          "text": "Greenland"
+        },
+        {
+          "id": "geography_hard_03_b",
+          "text": "New Guinea"
+        },
+        {
+          "id": "geography_hard_03_c",
+          "text": "Borneo"
+        },
+        {
+          "id": "geography_hard_03_d",
+          "text": "Madagascar"
+        }
+      ],
+      "correctChoiceId": "geography_hard_03_a",
+      "explanation": "Greenland is listed first among the largest islands.",
+      "sourceTitle": "The Physical World | CIA World Factbook",
+      "sourceUrl": "https://www.cia.gov/the-world-factbook/static/6c4d9b9a41b27707b6720720df7161d6/Physical_World.pdf",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_hard_04",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which line at zero degrees longitude is used with the Equator to define eastern and western hemispheres?",
+      "choices": [
+        {
+          "id": "geography_hard_04_a",
+          "text": "Tropic of Capricorn"
+        },
+        {
+          "id": "geography_hard_04_b",
+          "text": "Equator"
+        },
+        {
+          "id": "geography_hard_04_c",
+          "text": "Arctic Circle"
+        },
+        {
+          "id": "geography_hard_04_d",
+          "text": "Prime Meridian"
+        }
+      ],
+      "correctChoiceId": "geography_hard_04_d",
+      "explanation": "The prime meridian is the reference for east and west hemispheres.",
+      "sourceTitle": "Hemisphere | National Geographic",
+      "sourceUrl": "https://education.nationalgeographic.org/resource/hemisphere/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_hard_05",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which river is listed as the longest in the world in the USGS comparison?",
+      "choices": [
+        {
+          "id": "geography_hard_05_a",
+          "text": "Yangtze"
+        },
+        {
+          "id": "geography_hard_05_b",
+          "text": "Mississippi"
+        },
+        {
+          "id": "geography_hard_05_c",
+          "text": "Nile"
+        },
+        {
+          "id": "geography_hard_05_d",
+          "text": "Amazon"
+        }
+      ],
+      "correctChoiceId": "geography_hard_05_c",
+      "explanation": "USGS lists the Nile first while noting river-length definitions can vary.",
+      "sourceTitle": "Rivers of the World | U.S. Geological Survey",
+      "sourceUrl": "https://www.usgs.gov/water-science-school/science/rivers-world-worlds-longest-rivers",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "geography_hard_06",
+      "categoryId": "geography",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "How much of Earth’s surface is covered by water in the CIA physical-world reference?",
+      "choices": [
+        {
+          "id": "geography_hard_06_a",
+          "text": "About 90%"
+        },
+        {
+          "id": "geography_hard_06_b",
+          "text": "About 70.9%"
+        },
+        {
+          "id": "geography_hard_06_c",
+          "text": "About 29.1%"
+        },
+        {
+          "id": "geography_hard_06_d",
+          "text": "About 50%"
+        }
+      ],
+      "correctChoiceId": "geography_hard_06_b",
+      "explanation": "The reference lists water surface as 70.9 percent.",
+      "sourceTitle": "The Physical World | CIA World Factbook",
+      "sourceUrl": "https://www.cia.gov/the-world-factbook/static/6c4d9b9a41b27707b6720720df7161d6/Physical_World.pdf",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_easy_01",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What is 7 × 8?",
+      "choices": [
+        {
+          "id": "mathematics_easy_01_a",
+          "text": "54"
+        },
+        {
+          "id": "mathematics_easy_01_b",
+          "text": "64"
+        },
+        {
+          "id": "mathematics_easy_01_c",
+          "text": "48"
+        },
+        {
+          "id": "mathematics_easy_01_d",
+          "text": "56"
+        }
+      ],
+      "correctChoiceId": "mathematics_easy_01_d",
+      "explanation": "Seven groups of eight equal 56.",
+      "sourceTitle": "Multiplication - Times Tables | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/tables.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_easy_02",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What is 45 + 27?",
+      "choices": [
+        {
+          "id": "mathematics_easy_02_a",
+          "text": "82"
+        },
+        {
+          "id": "mathematics_easy_02_b",
+          "text": "70"
+        },
+        {
+          "id": "mathematics_easy_02_c",
+          "text": "72"
+        },
+        {
+          "id": "mathematics_easy_02_d",
+          "text": "62"
+        }
+      ],
+      "correctChoiceId": "mathematics_easy_02_c",
+      "explanation": "45 + 27 = 45 + 20 + 7 = 65 + 7 = 72.",
+      "sourceTitle": "Addition | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/numbers/addition.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_easy_03",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "How many sides does a triangle have?",
+      "choices": [
+        {
+          "id": "mathematics_easy_03_a",
+          "text": "Six"
+        },
+        {
+          "id": "mathematics_easy_03_b",
+          "text": "Three"
+        },
+        {
+          "id": "mathematics_easy_03_c",
+          "text": "Four"
+        },
+        {
+          "id": "mathematics_easy_03_d",
+          "text": "Five"
+        }
+      ],
+      "correctChoiceId": "mathematics_easy_03_b",
+      "explanation": "A triangle is a three-sided polygon.",
+      "sourceTitle": "Regular Polygons | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/geometry/regular-polygons.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_easy_04",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What is half of 18?",
+      "choices": [
+        {
+          "id": "mathematics_easy_04_a",
+          "text": "9"
+        },
+        {
+          "id": "mathematics_easy_04_b",
+          "text": "8"
+        },
+        {
+          "id": "mathematics_easy_04_c",
+          "text": "10"
+        },
+        {
+          "id": "mathematics_easy_04_d",
+          "text": "6"
+        }
+      ],
+      "correctChoiceId": "mathematics_easy_04_a",
+      "explanation": "Half of 18 is 9.",
+      "sourceTitle": "Fractions | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/fractions.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_easy_05",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What is the area of a rectangle 5 units wide and 3 units tall?",
+      "choices": [
+        {
+          "id": "mathematics_easy_05_a",
+          "text": "8 square units"
+        },
+        {
+          "id": "mathematics_easy_05_b",
+          "text": "16 square units"
+        },
+        {
+          "id": "mathematics_easy_05_c",
+          "text": "30 square units"
+        },
+        {
+          "id": "mathematics_easy_05_d",
+          "text": "15 square units"
+        }
+      ],
+      "correctChoiceId": "mathematics_easy_05_d",
+      "explanation": "Rectangle area is width multiplied by height: 5 × 3.",
+      "sourceTitle": "Area of Plane Shapes | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/area.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_easy_06",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which number is an even number?",
+      "choices": [
+        {
+          "id": "mathematics_easy_06_a",
+          "text": "31"
+        },
+        {
+          "id": "mathematics_easy_06_b",
+          "text": "45"
+        },
+        {
+          "id": "mathematics_easy_06_c",
+          "text": "24"
+        },
+        {
+          "id": "mathematics_easy_06_d",
+          "text": "17"
+        }
+      ],
+      "correctChoiceId": "mathematics_easy_06_c",
+      "explanation": "24 is divisible by 2 with no remainder.",
+      "sourceTitle": "Prime Numbers and Composite Numbers | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/prime-composite-number.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_medium_01",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What is the area of a triangle with base 10 and height 6?",
+      "choices": [
+        {
+          "id": "mathematics_medium_01_a",
+          "text": "16 square units"
+        },
+        {
+          "id": "mathematics_medium_01_b",
+          "text": "36 square units"
+        },
+        {
+          "id": "mathematics_medium_01_c",
+          "text": "30 square units"
+        },
+        {
+          "id": "mathematics_medium_01_d",
+          "text": "60 square units"
+        }
+      ],
+      "correctChoiceId": "mathematics_medium_01_c",
+      "explanation": "Triangle area is one-half times base times height.",
+      "sourceTitle": "Area of Plane Shapes | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/area.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_medium_02",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What is 3/4 expressed as a decimal?",
+      "choices": [
+        {
+          "id": "mathematics_medium_02_a",
+          "text": "1.25"
+        },
+        {
+          "id": "mathematics_medium_02_b",
+          "text": "0.75"
+        },
+        {
+          "id": "mathematics_medium_02_c",
+          "text": "0.34"
+        },
+        {
+          "id": "mathematics_medium_02_d",
+          "text": "0.25"
+        }
+      ],
+      "correctChoiceId": "mathematics_medium_02_b",
+      "explanation": "Three divided by four equals 0.75.",
+      "sourceTitle": "Fractions | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/fractions.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_medium_03",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What is the perimeter of a square with side length 7?",
+      "choices": [
+        {
+          "id": "mathematics_medium_03_a",
+          "text": "28 units"
+        },
+        {
+          "id": "mathematics_medium_03_b",
+          "text": "14 units"
+        },
+        {
+          "id": "mathematics_medium_03_c",
+          "text": "49 units"
+        },
+        {
+          "id": "mathematics_medium_03_d",
+          "text": "21 units"
+        }
+      ],
+      "correctChoiceId": "mathematics_medium_03_a",
+      "explanation": "A square has four equal sides, so 4 × 7 = 28.",
+      "sourceTitle": "Square (Geometry) | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/geometry/square.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_medium_04",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which number is prime?",
+      "choices": [
+        {
+          "id": "mathematics_medium_04_a",
+          "text": "21"
+        },
+        {
+          "id": "mathematics_medium_04_b",
+          "text": "27"
+        },
+        {
+          "id": "mathematics_medium_04_c",
+          "text": "35"
+        },
+        {
+          "id": "mathematics_medium_04_d",
+          "text": "29"
+        }
+      ],
+      "correctChoiceId": "mathematics_medium_04_d",
+      "explanation": "29 has no positive divisors other than 1 and itself.",
+      "sourceTitle": "Prime Numbers and Composite Numbers | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/prime-composite-number.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_medium_05",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What is the area of a circle with radius r?",
+      "choices": [
+        {
+          "id": "mathematics_medium_05_a",
+          "text": "πd"
+        },
+        {
+          "id": "mathematics_medium_05_b",
+          "text": "r²/2"
+        },
+        {
+          "id": "mathematics_medium_05_c",
+          "text": "πr²"
+        },
+        {
+          "id": "mathematics_medium_05_d",
+          "text": "2πr"
+        }
+      ],
+      "correctChoiceId": "mathematics_medium_05_c",
+      "explanation": "The area formula for a circle is π times radius squared.",
+      "sourceTitle": "Area of Plane Shapes | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/area.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_medium_06",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What is the sum of the interior angles of a triangle?",
+      "choices": [
+        {
+          "id": "mathematics_medium_06_a",
+          "text": "360 degrees"
+        },
+        {
+          "id": "mathematics_medium_06_b",
+          "text": "180 degrees"
+        },
+        {
+          "id": "mathematics_medium_06_c",
+          "text": "90 degrees"
+        },
+        {
+          "id": "mathematics_medium_06_d",
+          "text": "270 degrees"
+        }
+      ],
+      "correctChoiceId": "mathematics_medium_06_b",
+      "explanation": "The interior angles of a Euclidean triangle sum to 180 degrees.",
+      "sourceTitle": "Regular Polygons | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/geometry/regular-polygons.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_hard_01",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "A right triangle has legs 6 and 8. What is its hypotenuse length?",
+      "choices": [
+        {
+          "id": "mathematics_hard_01_a",
+          "text": "8"
+        },
+        {
+          "id": "mathematics_hard_01_b",
+          "text": "10"
+        },
+        {
+          "id": "mathematics_hard_01_c",
+          "text": "12"
+        },
+        {
+          "id": "mathematics_hard_01_d",
+          "text": "14"
+        }
+      ],
+      "correctChoiceId": "mathematics_hard_01_b",
+      "explanation": "By the Pythagorean theorem, 6² + 8² = 10².",
+      "sourceTitle": "Pythagorean Theorem | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/pythagoras.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_hard_02",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "What is the area of a trapezoid with parallel sides 4 and 10 and height 3?",
+      "choices": [
+        {
+          "id": "mathematics_hard_02_a",
+          "text": "21 square units"
+        },
+        {
+          "id": "mathematics_hard_02_b",
+          "text": "42 square units"
+        },
+        {
+          "id": "mathematics_hard_02_c",
+          "text": "18 square units"
+        },
+        {
+          "id": "mathematics_hard_02_d",
+          "text": "14 square units"
+        }
+      ],
+      "correctChoiceId": "mathematics_hard_02_a",
+      "explanation": "Area is one-half the sum of parallel sides times height.",
+      "sourceTitle": "Area of Plane Shapes | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/area.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_hard_03",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "What is the least common multiple of 6 and 8?",
+      "choices": [
+        {
+          "id": "mathematics_hard_03_a",
+          "text": "48"
+        },
+        {
+          "id": "mathematics_hard_03_b",
+          "text": "14"
+        },
+        {
+          "id": "mathematics_hard_03_c",
+          "text": "2"
+        },
+        {
+          "id": "mathematics_hard_03_d",
+          "text": "24"
+        }
+      ],
+      "correctChoiceId": "mathematics_hard_03_d",
+      "explanation": "24 is the smallest positive number divisible by both 6 and 8.",
+      "sourceTitle": "Least Common Multiple | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/least-common-multiple.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_hard_04",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "How many diagonals does a pentagon have?",
+      "choices": [
+        {
+          "id": "mathematics_hard_04_a",
+          "text": "Seven"
+        },
+        {
+          "id": "mathematics_hard_04_b",
+          "text": "Ten"
+        },
+        {
+          "id": "mathematics_hard_04_c",
+          "text": "Five"
+        },
+        {
+          "id": "mathematics_hard_04_d",
+          "text": "Three"
+        }
+      ],
+      "correctChoiceId": "mathematics_hard_04_c",
+      "explanation": "A pentagon has n(n−3)/2 = 5 diagonals.",
+      "sourceTitle": "Regular Polygons | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/geometry/regular-polygons.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_hard_05",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "What is 2⁵?",
+      "choices": [
+        {
+          "id": "mathematics_hard_05_a",
+          "text": "64"
+        },
+        {
+          "id": "mathematics_hard_05_b",
+          "text": "32"
+        },
+        {
+          "id": "mathematics_hard_05_c",
+          "text": "16"
+        },
+        {
+          "id": "mathematics_hard_05_d",
+          "text": "25"
+        }
+      ],
+      "correctChoiceId": "mathematics_hard_05_b",
+      "explanation": "2 multiplied by itself five times equals 32.",
+      "sourceTitle": "Exponents | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/exponent.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "mathematics_hard_06",
+      "categoryId": "mathematics",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "If a circle’s diameter is 14, what is its radius?",
+      "choices": [
+        {
+          "id": "mathematics_hard_06_a",
+          "text": "7"
+        },
+        {
+          "id": "mathematics_hard_06_b",
+          "text": "14"
+        },
+        {
+          "id": "mathematics_hard_06_c",
+          "text": "28"
+        },
+        {
+          "id": "mathematics_hard_06_d",
+          "text": "3.5"
+        }
+      ],
+      "correctChoiceId": "mathematics_hard_06_a",
+      "explanation": "The radius is half the diameter.",
+      "sourceTitle": "Area of Plane Shapes | Math Is Fun",
+      "sourceUrl": "https://www.mathsisfun.com/area.html",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_easy_01",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "In a standard football match under IFAB Law 7, how many equal periods of play are there?",
+      "choices": [
+        {
+          "id": "sports_easy_01_a",
+          "text": "Four"
+        },
+        {
+          "id": "sports_easy_01_b",
+          "text": "Five"
+        },
+        {
+          "id": "sports_easy_01_c",
+          "text": "Two"
+        },
+        {
+          "id": "sports_easy_01_d",
+          "text": "Three"
+        }
+      ],
+      "correctChoiceId": "sports_easy_01_c",
+      "explanation": "The match is divided into two equal periods.",
+      "sourceTitle": "Law 7: The Duration of the Match | IFAB",
+      "sourceUrl": "https://www.theifab.com/laws/latest/the-duration-of-the-match/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_easy_02",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "In the high jump, how many feet may an athlete use for takeoff?",
+      "choices": [
+        {
+          "id": "sports_easy_02_a",
+          "text": "Either hand"
+        },
+        {
+          "id": "sports_easy_02_b",
+          "text": "One"
+        },
+        {
+          "id": "sports_easy_02_c",
+          "text": "Two"
+        },
+        {
+          "id": "sports_easy_02_d",
+          "text": "Three"
+        }
+      ],
+      "correctChoiceId": "sports_easy_02_b",
+      "explanation": "World Athletics describes a one-foot takeoff.",
+      "sourceTitle": "High Jump | World Athletics",
+      "sourceUrl": "https://worldathletics.org/disciplines/jumps/high-jump",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_easy_03",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "How many interlocking rings are in the Olympic symbol?",
+      "choices": [
+        {
+          "id": "sports_easy_03_a",
+          "text": "Five"
+        },
+        {
+          "id": "sports_easy_03_b",
+          "text": "Four"
+        },
+        {
+          "id": "sports_easy_03_c",
+          "text": "Six"
+        },
+        {
+          "id": "sports_easy_03_d",
+          "text": "Seven"
+        }
+      ],
+      "correctChoiceId": "sports_easy_03_a",
+      "explanation": "The Olympic symbol consists of five interlocking rings.",
+      "sourceTitle": "Who Created the Olympic Rings Symbol? | IOC",
+      "sourceUrl": "https://www.olympics.com/ioc/faq/olympic-symbol-and-identity/who-created-the-olympic-rings-symbol",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_easy_04",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What object must a high jumper clear?",
+      "choices": [
+        {
+          "id": "sports_easy_04_a",
+          "text": "A net"
+        },
+        {
+          "id": "sports_easy_04_b",
+          "text": "A hurdle on the ground"
+        },
+        {
+          "id": "sports_easy_04_c",
+          "text": "A finish tape"
+        },
+        {
+          "id": "sports_easy_04_d",
+          "text": "A horizontal bar"
+        }
+      ],
+      "correctChoiceId": "sports_easy_04_d",
+      "explanation": "The athlete aims to clear a horizontal bar.",
+      "sourceTitle": "High Jump | World Athletics",
+      "sourceUrl": "https://worldathletics.org/disciplines/jumps/high-jump",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_easy_05",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What sport uses a penalty kick marked 11 metres from the midpoint between goalposts?",
+      "choices": [
+        {
+          "id": "sports_easy_05_a",
+          "text": "Tennis"
+        },
+        {
+          "id": "sports_easy_05_b",
+          "text": "Volleyball"
+        },
+        {
+          "id": "sports_easy_05_c",
+          "text": "Association football"
+        },
+        {
+          "id": "sports_easy_05_d",
+          "text": "Basketball"
+        }
+      ],
+      "correctChoiceId": "sports_easy_05_c",
+      "explanation": "IFAB Law 1 specifies the penalty mark in football.",
+      "sourceTitle": "Law 1: The Field of Play | IFAB",
+      "sourceUrl": "https://theifab.com/laws/latest/the-field-of-play/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_easy_06",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "How many disciplines make up the heptathlon?",
+      "choices": [
+        {
+          "id": "sports_easy_06_a",
+          "text": "Two"
+        },
+        {
+          "id": "sports_easy_06_b",
+          "text": "Seven"
+        },
+        {
+          "id": "sports_easy_06_c",
+          "text": "Five"
+        },
+        {
+          "id": "sports_easy_06_d",
+          "text": "Ten"
+        }
+      ],
+      "correctChoiceId": "sports_easy_06_b",
+      "explanation": "The heptathlon consists of seven events held over two consecutive days.",
+      "sourceTitle": "World Athletics Technical Rules, Book C, Rule 39",
+      "sourceUrl": "https://worldathletics.org/download/download?filename=803d6cb5-38df-4438-a917-c371cb46a837.pdf&urlslug=C1.1+%26+C2.1+-+Competition+Rules+%26+Technical+Rules",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_medium_01",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "How long is each of the two regular periods in a standard adult football match under IFAB Law 7?",
+      "choices": [
+        {
+          "id": "sports_medium_01_a",
+          "text": "90 minutes"
+        },
+        {
+          "id": "sports_medium_01_b",
+          "text": "45 minutes"
+        },
+        {
+          "id": "sports_medium_01_c",
+          "text": "30 minutes"
+        },
+        {
+          "id": "sports_medium_01_d",
+          "text": "60 minutes"
+        }
+      ],
+      "correctChoiceId": "sports_medium_01_b",
+      "explanation": "Each period is 45 minutes, subject to competition rules.",
+      "sourceTitle": "Law 7: The Duration of the Match | IFAB",
+      "sourceUrl": "https://www.theifab.com/laws/latest/the-duration-of-the-match/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_medium_02",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "At which Olympic Games did men’s high jump make its Olympic debut?",
+      "choices": [
+        {
+          "id": "sports_medium_02_a",
+          "text": "1896 Games"
+        },
+        {
+          "id": "sports_medium_02_b",
+          "text": "1900 Games"
+        },
+        {
+          "id": "sports_medium_02_c",
+          "text": "1928 Games"
+        },
+        {
+          "id": "sports_medium_02_d",
+          "text": "1968 Games"
+        }
+      ],
+      "correctChoiceId": "sports_medium_02_a",
+      "explanation": "World Athletics gives the men’s debut as the 1896 Games.",
+      "sourceTitle": "High Jump | World Athletics",
+      "sourceUrl": "https://worldathletics.org/disciplines/jumps/high-jump",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_medium_03",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "In what year was women’s high jump introduced to the Olympic programme?",
+      "choices": [
+        {
+          "id": "sports_medium_03_a",
+          "text": "1896"
+        },
+        {
+          "id": "sports_medium_03_b",
+          "text": "1948"
+        },
+        {
+          "id": "sports_medium_03_c",
+          "text": "1968"
+        },
+        {
+          "id": "sports_medium_03_d",
+          "text": "1928"
+        }
+      ],
+      "correctChoiceId": "sports_medium_03_d",
+      "explanation": "World Athletics gives 1928 as its introduction.",
+      "sourceTitle": "High Jump | World Athletics",
+      "sourceUrl": "https://worldathletics.org/disciplines/jumps/high-jump",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_medium_04",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "How long is the horizontal bar used in high jump, according to World Athletics?",
+      "choices": [
+        {
+          "id": "sports_medium_04_a",
+          "text": "Six metres"
+        },
+        {
+          "id": "sports_medium_04_b",
+          "text": "Ten metres"
+        },
+        {
+          "id": "sports_medium_04_c",
+          "text": "Four metres"
+        },
+        {
+          "id": "sports_medium_04_d",
+          "text": "Two metres"
+        }
+      ],
+      "correctChoiceId": "sports_medium_04_c",
+      "explanation": "World Athletics describes a four-metre-long bar.",
+      "sourceTitle": "High Jump | World Athletics",
+      "sourceUrl": "https://worldathletics.org/disciplines/jumps/high-jump",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_medium_05",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What do the five Olympic rings symbolize in Pierre de Coubertin’s explanation?",
+      "choices": [
+        {
+          "id": "sports_medium_05_a",
+          "text": "Five medal colors"
+        },
+        {
+          "id": "sports_medium_05_b",
+          "text": "The five parts of the world connected with Olympism"
+        },
+        {
+          "id": "sports_medium_05_c",
+          "text": "Five sports played at the first Games"
+        },
+        {
+          "id": "sports_medium_05_d",
+          "text": "Five Olympic host cities"
+        }
+      ],
+      "correctChoiceId": "sports_medium_05_b",
+      "explanation": "Coubertin described five parts of the world in his explanation.",
+      "sourceTitle": "Who Created the Olympic Rings Symbol? | IOC",
+      "sourceUrl": "https://www.olympics.com/ioc/faq/olympic-symbol-and-identity/who-created-the-olympic-rings-symbol",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_medium_06",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "On what background are the five Olympic rings displayed?",
+      "choices": [
+        {
+          "id": "sports_medium_06_a",
+          "text": "White"
+        },
+        {
+          "id": "sports_medium_06_b",
+          "text": "Black"
+        },
+        {
+          "id": "sports_medium_06_c",
+          "text": "Blue"
+        },
+        {
+          "id": "sports_medium_06_d",
+          "text": "Red"
+        }
+      ],
+      "correctChoiceId": "sports_medium_06_a",
+      "explanation": "The full-colour Olympic rings appear on a white background, as on the Olympic flag.",
+      "sourceTitle": "The Olympic Rings | International Olympic Committee",
+      "sourceUrl": "https://www.olympics.com/ioc/olympic-rings",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_hard_01",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Over how many days is the heptathlon held?",
+      "choices": [
+        {
+          "id": "sports_hard_01_a",
+          "text": "Two days"
+        },
+        {
+          "id": "sports_hard_01_b",
+          "text": "One day"
+        },
+        {
+          "id": "sports_hard_01_c",
+          "text": "Three days"
+        },
+        {
+          "id": "sports_hard_01_d",
+          "text": "Seven days"
+        }
+      ],
+      "correctChoiceId": "sports_hard_01_a",
+      "explanation": "World Athletics schedules the heptathlon events across two consecutive 24-hour periods.",
+      "sourceTitle": "World Athletics Technical Rules, Book C, Rule 39",
+      "sourceUrl": "https://worldathletics.org/download/download?filename=803d6cb5-38df-4438-a917-c371cb46a837.pdf&urlslug=C1.1+%26+C2.1+-+Competition+Rules+%26+Technical+Rules",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_hard_02",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which athlete popularized the high-jump technique known as the Fosbury flop?",
+      "choices": [
+        {
+          "id": "sports_hard_02_a",
+          "text": "Jesse Owens"
+        },
+        {
+          "id": "sports_hard_02_b",
+          "text": "Paavo Nurmi"
+        },
+        {
+          "id": "sports_hard_02_c",
+          "text": "Emil Zátopek"
+        },
+        {
+          "id": "sports_hard_02_d",
+          "text": "Dick Fosbury"
+        }
+      ],
+      "correctChoiceId": "sports_hard_02_d",
+      "explanation": "World Athletics says Dick Fosbury popularized the technique after 1968.",
+      "sourceTitle": "High Jump | World Athletics",
+      "sourceUrl": "https://worldathletics.org/disciplines/jumps/high-jump",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_hard_03",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "In what year did the Olympic rings first appear at the top of a letter by Pierre de Coubertin?",
+      "choices": [
+        {
+          "id": "sports_hard_03_a",
+          "text": "1920"
+        },
+        {
+          "id": "sports_hard_03_b",
+          "text": "1948"
+        },
+        {
+          "id": "sports_hard_03_c",
+          "text": "1913"
+        },
+        {
+          "id": "sports_hard_03_d",
+          "text": "1896"
+        }
+      ],
+      "correctChoiceId": "sports_hard_03_c",
+      "explanation": "The IOC records their first appearance in 1913.",
+      "sourceTitle": "Who Created the Olympic Rings Symbol? | IOC",
+      "sourceUrl": "https://www.olympics.com/ioc/faq/olympic-symbol-and-identity/who-created-the-olympic-rings-symbol",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_hard_04",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "At which Olympic Games was the Olympic flag first raised?",
+      "choices": [
+        {
+          "id": "sports_hard_04_a",
+          "text": "London 1908"
+        },
+        {
+          "id": "sports_hard_04_b",
+          "text": "Antwerp 1920"
+        },
+        {
+          "id": "sports_hard_04_c",
+          "text": "Athens 1896"
+        },
+        {
+          "id": "sports_hard_04_d",
+          "text": "Paris 1900"
+        }
+      ],
+      "correctChoiceId": "sports_hard_04_b",
+      "explanation": "The IOC records Antwerp 1920 as the Olympic Games debut of the flag.",
+      "sourceTitle": "Antwerp 1920: A Symbol of Peace, Unity and Strength | International Olympic Committee",
+      "sourceUrl": "https://www.olympics.com/ioc/news/antwerp-1920-a-symbol-of-peace-unity-and-strength",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_hard_05",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Under IFAB Law 14, what must be stationary before a penalty kick is taken?",
+      "choices": [
+        {
+          "id": "sports_hard_05_a",
+          "text": "The ball"
+        },
+        {
+          "id": "sports_hard_05_b",
+          "text": "The goalkeeper"
+        },
+        {
+          "id": "sports_hard_05_c",
+          "text": "The referee"
+        },
+        {
+          "id": "sports_hard_05_d",
+          "text": "The goal net only"
+        }
+      ],
+      "correctChoiceId": "sports_hard_05_a",
+      "explanation": "The law requires the ball to be stationary.",
+      "sourceTitle": "Law 14: The Penalty Kick | IFAB",
+      "sourceUrl": "https://backup.theifab.com/laws/latest/the-penalty-kick/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "sports_hard_06",
+      "categoryId": "sports",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Under IFAB Law 1, how far is the penalty mark from the midpoint between the goalposts?",
+      "choices": [
+        {
+          "id": "sports_hard_06_a",
+          "text": "9.15 metres"
+        },
+        {
+          "id": "sports_hard_06_b",
+          "text": "5.5 metres"
+        },
+        {
+          "id": "sports_hard_06_c",
+          "text": "16.5 metres"
+        },
+        {
+          "id": "sports_hard_06_d",
+          "text": "11 metres"
+        }
+      ],
+      "correctChoiceId": "sports_hard_06_d",
+      "explanation": "The penalty mark is 11 metres from the midpoint.",
+      "sourceTitle": "Law 1: The Field of Play | IFAB",
+      "sourceUrl": "https://theifab.com/laws/latest/the-field-of-play/",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_easy_01",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which art movement began in and around Paris in the late 19th century?",
+      "choices": [
+        {
+          "id": "arts_culture_easy_01_a",
+          "text": "Futurism"
+        },
+        {
+          "id": "arts_culture_easy_01_b",
+          "text": "Impressionism"
+        },
+        {
+          "id": "arts_culture_easy_01_c",
+          "text": "Cubism"
+        },
+        {
+          "id": "arts_culture_easy_01_d",
+          "text": "Surrealism"
+        }
+      ],
+      "correctChoiceId": "arts_culture_easy_01_b",
+      "explanation": "The National Gallery of Art locates Impressionism in Paris in the late 19th century.",
+      "sourceTitle": "Impressionism | National Gallery of Art",
+      "sourceUrl": "https://www.nga.gov/artworks/impressionism",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_easy_02",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which art form uses ordered bodily movements, often performed to music?",
+      "choices": [
+        {
+          "id": "arts_culture_easy_02_a",
+          "text": "Dance"
+        },
+        {
+          "id": "arts_culture_easy_02_b",
+          "text": "Sculpture"
+        },
+        {
+          "id": "arts_culture_easy_02_c",
+          "text": "Architecture"
+        },
+        {
+          "id": "arts_culture_easy_02_d",
+          "text": "Printmaking"
+        }
+      ],
+      "correctChoiceId": "arts_culture_easy_02_a",
+      "explanation": "UNESCO describes dance as ordered bodily movements, usually to music.",
+      "sourceTitle": "Performing Arts | UNESCO Intangible Cultural Heritage",
+      "sourceUrl": "https://ich.unesco.org/en/performing-arts-such-as-traditional-music-dance-and-theatre-00054",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_easy_03",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which artist painted “Impression, Sunrise,” whose title helped name an art movement?",
+      "choices": [
+        {
+          "id": "arts_culture_easy_03_a",
+          "text": "Pablo Picasso"
+        },
+        {
+          "id": "arts_culture_easy_03_b",
+          "text": "Georgia O’Keeffe"
+        },
+        {
+          "id": "arts_culture_easy_03_c",
+          "text": "Henri Matisse"
+        },
+        {
+          "id": "arts_culture_easy_03_d",
+          "text": "Claude Monet"
+        }
+      ],
+      "correctChoiceId": "arts_culture_easy_03_d",
+      "explanation": "The term Impressionist came from a review of Monet’s painting.",
+      "sourceTitle": "What Is Impressionism? | National Gallery of Art",
+      "sourceUrl": "https://www.nga.gov/stories/articles/what-impressionism-4-things-know",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_easy_04",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which of these is a performing art named by UNESCO?",
+      "choices": [
+        {
+          "id": "arts_culture_easy_04_a",
+          "text": "Carpentry"
+        },
+        {
+          "id": "arts_culture_easy_04_b",
+          "text": "Geology"
+        },
+        {
+          "id": "arts_culture_easy_04_c",
+          "text": "Theatre"
+        },
+        {
+          "id": "arts_culture_easy_04_d",
+          "text": "Cartography"
+        }
+      ],
+      "correctChoiceId": "arts_culture_easy_04_c",
+      "explanation": "UNESCO includes theatre among performing arts.",
+      "sourceTitle": "Performing Arts | UNESCO Intangible Cultural Heritage",
+      "sourceUrl": "https://ich.unesco.org/en/performing-arts-such-as-traditional-music-dance-and-theatre-00054",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_easy_05",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "Which artist was among the founders of the Impressionist movement, according to the National Gallery of Art?",
+      "choices": [
+        {
+          "id": "arts_culture_easy_05_a",
+          "text": "Andy Warhol"
+        },
+        {
+          "id": "arts_culture_easy_05_b",
+          "text": "Auguste Renoir"
+        },
+        {
+          "id": "arts_culture_easy_05_c",
+          "text": "Salvador Dalí"
+        },
+        {
+          "id": "arts_culture_easy_05_d",
+          "text": "Rembrandt"
+        }
+      ],
+      "correctChoiceId": "arts_culture_easy_05_b",
+      "explanation": "NGA identifies Renoir as a founding member.",
+      "sourceTitle": "Impressionism | National Gallery of Art",
+      "sourceUrl": "https://www.nga.gov/artworks/impressionism",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_easy_06",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "prompt": "What kind of art object is a sculpture?",
+      "choices": [
+        {
+          "id": "arts_culture_easy_06_a",
+          "text": "A three-dimensional artwork"
+        },
+        {
+          "id": "arts_culture_easy_06_b",
+          "text": "A written law"
+        },
+        {
+          "id": "arts_culture_easy_06_c",
+          "text": "A musical scale"
+        },
+        {
+          "id": "arts_culture_easy_06_d",
+          "text": "A map projection"
+        }
+      ],
+      "correctChoiceId": "arts_culture_easy_06_a",
+      "explanation": "Sculpture is three-dimensional form in art.",
+      "sourceTitle": "The Element of Art: Form | National Gallery of Art",
+      "sourceUrl": "https://www.nga.gov/educational-resources/elements-art/elements-art-form",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_medium_01",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What did Impressionist painters often try to capture in their work?",
+      "choices": [
+        {
+          "id": "arts_culture_medium_01_a",
+          "text": "Fleeting effects of light and color"
+        },
+        {
+          "id": "arts_culture_medium_01_b",
+          "text": "Exact engineering diagrams"
+        },
+        {
+          "id": "arts_culture_medium_01_c",
+          "text": "Only scenes from ancient myths"
+        },
+        {
+          "id": "arts_culture_medium_01_d",
+          "text": "A single flat color"
+        }
+      ],
+      "correctChoiceId": "arts_culture_medium_01_a",
+      "explanation": "NGA highlights the movement’s interest in fleeting light and color.",
+      "sourceTitle": "Impressionism | National Gallery of Art",
+      "sourceUrl": "https://www.nga.gov/artworks/impressionism",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_medium_02",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "In what year did the first Impressionist exhibition take place?",
+      "choices": [
+        {
+          "id": "arts_culture_medium_02_a",
+          "text": "1774"
+        },
+        {
+          "id": "arts_culture_medium_02_b",
+          "text": "1904"
+        },
+        {
+          "id": "arts_culture_medium_02_c",
+          "text": "1924"
+        },
+        {
+          "id": "arts_culture_medium_02_d",
+          "text": "1874"
+        }
+      ],
+      "correctChoiceId": "arts_culture_medium_02_d",
+      "explanation": "NGA dates the first Impressionist show to 1874.",
+      "sourceTitle": "What Is Impressionism? | National Gallery of Art",
+      "sourceUrl": "https://www.nga.gov/stories/articles/what-impressionism-4-things-know",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_medium_03",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which artist is associated with the painting “Little Dancer Aged Fourteen”?",
+      "choices": [
+        {
+          "id": "arts_culture_medium_03_a",
+          "text": "Paul Cézanne"
+        },
+        {
+          "id": "arts_culture_medium_03_b",
+          "text": "Henri Rousseau"
+        },
+        {
+          "id": "arts_culture_medium_03_c",
+          "text": "Edgar Degas"
+        },
+        {
+          "id": "arts_culture_medium_03_d",
+          "text": "Claude Monet"
+        }
+      ],
+      "correctChoiceId": "arts_culture_medium_03_c",
+      "explanation": "Edgar Degas created Little Dancer Aged Fourteen as a wax sculpture, not a painting.",
+      "sourceTitle": "Little Dancer Aged Fourteen | National Gallery of Art",
+      "sourceUrl": "https://www.nga.gov/artworks/110292-little-dancer-aged-fourteen",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_medium_04",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which two activities are included in UNESCO’s description of performing arts?",
+      "choices": [
+        {
+          "id": "arts_culture_medium_04_a",
+          "text": "Navigation and farming"
+        },
+        {
+          "id": "arts_culture_medium_04_b",
+          "text": "Music and theatre"
+        },
+        {
+          "id": "arts_culture_medium_04_c",
+          "text": "Surveying and mining"
+        },
+        {
+          "id": "arts_culture_medium_04_d",
+          "text": "Accounting and law"
+        }
+      ],
+      "correctChoiceId": "arts_culture_medium_04_b",
+      "explanation": "UNESCO includes music, dance, and theatre among performing arts.",
+      "sourceTitle": "Performing Arts | UNESCO Intangible Cultural Heritage",
+      "sourceUrl": "https://ich.unesco.org/en/performing-arts-such-as-traditional-music-dance-and-theatre-00054",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_medium_05",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "Which art movement is associated with Pablo Picasso in the NGA early-modernism overview?",
+      "choices": [
+        {
+          "id": "arts_culture_medium_05_a",
+          "text": "Cubism"
+        },
+        {
+          "id": "arts_culture_medium_05_b",
+          "text": "Impressionism"
+        },
+        {
+          "id": "arts_culture_medium_05_c",
+          "text": "Baroque"
+        },
+        {
+          "id": "arts_culture_medium_05_d",
+          "text": "Romanticism"
+        }
+      ],
+      "correctChoiceId": "arts_culture_medium_05_a",
+      "explanation": "The National Gallery of Art identifies Cubism as a style invented by Pablo Picasso and Georges Braque.",
+      "sourceTitle": "Cubism | National Gallery of Art",
+      "sourceUrl": "https://www.nga.gov/artworks/cubism",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_medium_06",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "prompt": "What is one common role music can play in a community, according to UNESCO?",
+      "choices": [
+        {
+          "id": "arts_culture_medium_06_a",
+          "text": "It can replace all spoken language"
+        },
+        {
+          "id": "arts_culture_medium_06_b",
+          "text": "It is used only for solo performances"
+        },
+        {
+          "id": "arts_culture_medium_06_c",
+          "text": "It must be performed in a concert hall"
+        },
+        {
+          "id": "arts_culture_medium_06_d",
+          "text": "It can be part of rituals or festive events"
+        }
+      ],
+      "correctChoiceId": "arts_culture_medium_06_d",
+      "explanation": "UNESCO notes music occurs in rituals, festivities, and other contexts.",
+      "sourceTitle": "Performing Arts | UNESCO Intangible Cultural Heritage",
+      "sourceUrl": "https://ich.unesco.org/en/performing-arts-such-as-traditional-music-dance-and-theatre-00054",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_hard_01",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which critic’s review of Monet’s “Impression, Sunrise” helped popularize the word “Impressionist”?",
+      "choices": [
+        {
+          "id": "arts_culture_hard_01_a",
+          "text": "John Ruskin"
+        },
+        {
+          "id": "arts_culture_hard_01_b",
+          "text": "Roger Fry"
+        },
+        {
+          "id": "arts_culture_hard_01_c",
+          "text": "Clement Greenberg"
+        },
+        {
+          "id": "arts_culture_hard_01_d",
+          "text": "Louis Leroy"
+        }
+      ],
+      "correctChoiceId": "arts_culture_hard_01_d",
+      "explanation": "NGA identifies Louis Leroy as the critic who coined the term.",
+      "sourceTitle": "What Is Impressionism? | National Gallery of Art",
+      "sourceUrl": "https://www.nga.gov/stories/articles/what-impressionism-4-things-know",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_hard_02",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which artist’s work is described by NGA as exploring natural forms and spatial depth in Post-Impressionism?",
+      "choices": [
+        {
+          "id": "arts_culture_hard_02_a",
+          "text": "Edgar Degas"
+        },
+        {
+          "id": "arts_culture_hard_02_b",
+          "text": "Berthe Morisot"
+        },
+        {
+          "id": "arts_culture_hard_02_c",
+          "text": "Paul Cézanne"
+        },
+        {
+          "id": "arts_culture_hard_02_d",
+          "text": "Claude Monet"
+        }
+      ],
+      "correctChoiceId": "arts_culture_hard_02_c",
+      "explanation": "The National Gallery of Art notes that Post-Impressionist Paul Cézanne was preoccupied with natural forms and spatial depth.",
+      "sourceTitle": "Post-Impressionism | National Gallery of Art",
+      "sourceUrl": "https://www.nga.gov/artworks/post-impressionism",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_hard_03",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which is one of UNESCO’s five broad domains of intangible cultural heritage?",
+      "choices": [
+        {
+          "id": "arts_culture_hard_03_a",
+          "text": "Road engineering"
+        },
+        {
+          "id": "arts_culture_hard_03_b",
+          "text": "Traditional craftsmanship"
+        },
+        {
+          "id": "arts_culture_hard_03_c",
+          "text": "Quantum mechanics"
+        },
+        {
+          "id": "arts_culture_hard_03_d",
+          "text": "Commercial banking"
+        }
+      ],
+      "correctChoiceId": "arts_culture_hard_03_b",
+      "explanation": "UNESCO lists traditional craftsmanship as a domain.",
+      "sourceTitle": "Intangible Cultural Heritage | UNESCO",
+      "sourceUrl": "https://www.unesco.org/en/intangible-cultural-heritage?hub=169342",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_hard_04",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which artistic movement is included in NGA’s overview of early modernism from 1900 to 1940?",
+      "choices": [
+        {
+          "id": "arts_culture_hard_04_a",
+          "text": "Surrealism"
+        },
+        {
+          "id": "arts_culture_hard_04_b",
+          "text": "Impressionism only"
+        },
+        {
+          "id": "arts_culture_hard_04_c",
+          "text": "Medievalism"
+        },
+        {
+          "id": "arts_culture_hard_04_d",
+          "text": "Neoclassicism only"
+        }
+      ],
+      "correctChoiceId": "arts_culture_hard_04_a",
+      "explanation": "NGA’s early-modernism overview includes surrealism.",
+      "sourceTitle": "The Inquiring Eye: Early Modernism | National Gallery of Art",
+      "sourceUrl": "https://www.nga.gov/educational-resources/inquiring-eye-early-modernism-1900-1940",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_hard_05",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "What may traditional theatre combine, according to UNESCO?",
+      "choices": [
+        {
+          "id": "arts_culture_hard_05_a",
+          "text": "Only silent movement"
+        },
+        {
+          "id": "arts_culture_hard_05_b",
+          "text": "Only instrumental music"
+        },
+        {
+          "id": "arts_culture_hard_05_c",
+          "text": "Painting and sculpture only"
+        },
+        {
+          "id": "arts_culture_hard_05_d",
+          "text": "Acting, singing, dance, music, and dialogue"
+        }
+      ],
+      "correctChoiceId": "arts_culture_hard_05_d",
+      "explanation": "UNESCO describes traditional theatre as potentially combining these forms.",
+      "sourceTitle": "Performing Arts | UNESCO Intangible Cultural Heritage",
+      "sourceUrl": "https://ich.unesco.org/en/performing-arts-such-as-traditional-music-dance-and-theatre-00054",
+      "verificationDate": "2026-10-30"
+    },
+    {
+      "id": "arts_culture_hard_06",
+      "categoryId": "arts_culture",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "prompt": "Which artist is identified by NGA as one of the Fauves, a group associated with powerful brushstrokes and saturated color?",
+      "choices": [
+        {
+          "id": "arts_culture_hard_06_a",
+          "text": "Auguste Rodin"
+        },
+        {
+          "id": "arts_culture_hard_06_b",
+          "text": "Johannes Vermeer"
+        },
+        {
+          "id": "arts_culture_hard_06_c",
+          "text": "Henri Matisse"
+        },
+        {
+          "id": "arts_culture_hard_06_d",
+          "text": "Claude Monet"
+        }
+      ],
+      "correctChoiceId": "arts_culture_hard_06_c",
+      "explanation": "NGA lists Matisse among the Fauves.",
+      "sourceTitle": "Impressionism | National Gallery of Art",
+      "sourceUrl": "https://www.nga.gov/artworks/impressionism",
+      "verificationDate": "2026-10-30"
+    }
+  ]
+}

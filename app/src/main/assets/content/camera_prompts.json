@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "prompts": [
+    {
+      "id": "general_knowledge_frame_01",
+      "categoryId": "general_knowledge",
+      "prompt": "Find an everyday object with a clear circular shape.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Look for the outline of an object; the circular shape should be easy to see in the photo."
+    },
+    {
+      "id": "general_knowledge_frame_02",
+      "categoryId": "general_knowledge",
+      "prompt": "Find a safe object that can stand upright on its own.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Choose something stable and place it on a flat surface without balancing or stacking it."
+    },
+    {
+      "id": "general_knowledge_frame_03",
+      "categoryId": "general_knowledge",
+      "prompt": "Find something blue in the shared play area.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Keep the object within the shared play area and make its blue color visible."
+    },
+    {
+      "id": "science_frame_01",
+      "categoryId": "science",
+      "prompt": "Find a visible shadow with a clear edge.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Look for a shadow cast by ordinary light; frame both the shadow and its edge."
+    },
+    {
+      "id": "science_frame_02",
+      "categoryId": "science",
+      "prompt": "Find a safe object showing a reflection of light.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "A reflection may appear on a shiny surface; avoid mirrors that could show people or private spaces."
+    },
+    {
+      "id": "science_frame_03",
+      "categoryId": "science",
+      "prompt": "Find a natural pattern, such as a leaf vein, without picking or damaging anything.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Look closely at a naturally occurring pattern, and leave the plant or material undisturbed."
+    },
+    {
+      "id": "technology_frame_01",
+      "categoryId": "technology",
+      "prompt": "Find a non-screen electronic device that is switched off.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "A small device is enough; make sure no screen or identifying information is visible."
+    },
+    {
+      "id": "technology_frame_02",
+      "categoryId": "technology",
+      "prompt": "Find an unplugged cable or connector.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Choose a cable that is disconnected at both ends and do not handle damaged wiring."
+    },
+    {
+      "id": "technology_frame_03",
+      "categoryId": "technology",
+      "prompt": "Find a safe object with a button or switch.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "The control can be on an everyday appliance or tool; do not switch on anything unsafe."
+    },
+    {
+      "id": "history_frame_01",
+      "categoryId": "history",
+      "prompt": "Find an old-fashioned household object, without photographing documents.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Think of an older style of household tool or object, and keep papers and labels out of frame."
+    },
+    {
+      "id": "history_frame_02",
+      "categoryId": "history",
+      "prompt": "Find an object that shows a repair or sign of reuse.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Look for a visible mend, patch, or sign that an item has been used again."
+    },
+    {
+      "id": "history_frame_03",
+      "categoryId": "history",
+      "prompt": "Find an item made using a traditional craft technique.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Look for visible handmade details such as weaving, stitching, carving, or shaping."
+    },
+    {
+      "id": "geography_frame_01",
+      "categoryId": "geography",
+      "prompt": "Find a globe or a printed map that contains no personal markings.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "A small section is fine if the map or globe is clearly recognizable and unmarked."
+    },
+    {
+      "id": "geography_frame_02",
+      "categoryId": "geography",
+      "prompt": "Find a safe object with a pattern of land-like and water-like colors.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Look for a safe design with contrasting colors that suggest land and water."
+    },
+    {
+      "id": "geography_frame_03",
+      "categoryId": "geography",
+      "prompt": "Find an item made in a place different from where you are playing, if its label is not private.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Check a non-private product label only if it is already visible; omit names and addresses."
+    },
+    {
+      "id": "mathematics_frame_01",
+      "categoryId": "mathematics",
+      "prompt": "Find a visible triangle shape.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "The triangle can be part of a larger safe object; make all three sides visible."
+    },
+    {
+      "id": "mathematics_frame_02",
+      "categoryId": "mathematics",
+      "prompt": "Find an object with a repeating pattern.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Look for a repeated shape, line, or color sequence and frame enough of it to show repetition."
+    },
+    {
+      "id": "mathematics_frame_03",
+      "categoryId": "mathematics",
+      "prompt": "Find two objects that show symmetry in their shape.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Place two safe objects side by side so their matching halves or balanced shapes are easy to compare."
+    },
+    {
+      "id": "sports_frame_01",
+      "categoryId": "sports",
+      "prompt": "Find a ball or other safe sports equipment.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "A ball, racket, or other safe equipment can qualify; no person needs to appear."
+    },
+    {
+      "id": "sports_frame_02",
+      "categoryId": "sports",
+      "prompt": "Find an object with a visible number that is not an address or personal code.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Use a number printed on ordinary equipment, and check that it is not an address or private code."
+    },
+    {
+      "id": "sports_frame_03",
+      "categoryId": "sports",
+      "prompt": "Find a pair of shoes arranged side by side.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Arrange the shoes next to each other on a clear surface; no one needs to wear them."
+    },
+    {
+      "id": "arts_culture_frame_01",
+      "categoryId": "arts_culture",
+      "prompt": "Find a handmade artwork or craft in the shared space.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Choose a handmade piece already in the shared space; do not move fragile or valuable items."
+    },
+    {
+      "id": "arts_culture_frame_02",
+      "categoryId": "arts_culture",
+      "prompt": "Find a musical instrument or a safe part of one.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "A visible part such as keys or strings can identify the instrument; do not play it if that is disruptive."
+    },
+    {
+      "id": "arts_culture_frame_03",
+      "categoryId": "arts_culture",
+      "prompt": "Find a fabric or object with a decorative pattern.",
+      "safetyNote": "Photograph only safe objects in a shared area. Do not photograph people, private documents, screens, addresses, credentials, or anything unsafe.",
+      "judgingGuidance": "The judge checks the submitted photo against the visible prompt. Accept if it clearly matches; otherwise reject. No automatic image recognition is used.",
+      "hint": "Frame a section where the decorative design is clear without including people or private belongings."
+    }
+  ]
+}

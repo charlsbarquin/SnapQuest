@@ -1,0 +1,8 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/snapquest_navy" />
+    <item
+        android:drawable="@drawable/ic_launcher_foreground"
+        android:width="96dp"
+        android:height="96dp"
+        android:gravity="center" />
+</layer-list>

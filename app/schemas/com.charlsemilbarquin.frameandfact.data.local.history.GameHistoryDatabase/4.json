@@ -1,0 +1,442 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 4,
+    "identityHash": "12ce39d28892c47e9f4f7f7f15b09cec",
+    "entities": [
+      {
+        "tableName": "completed_games",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`gameId` TEXT NOT NULL, `completedAtEpochMillis` INTEGER NOT NULL, `rulesVersion` INTEGER NOT NULL, `selectedCategories` TEXT NOT NULL, `difficultyLevels` TEXT NOT NULL, PRIMARY KEY(`gameId`))",
+        "fields": [
+          {
+            "fieldPath": "gameId",
+            "columnName": "gameId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completedAtEpochMillis",
+            "columnName": "completedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rulesVersion",
+            "columnName": "rulesVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "selectedCategories",
+            "columnName": "selectedCategories",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "difficultyLevels",
+            "columnName": "difficultyLevels",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "gameId"
+          ]
+        }
+      },
+      {
+        "tableName": "completed_game_participants",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`gameId` TEXT NOT NULL, `participantId` TEXT NOT NULL, `participantOrder` INTEGER NOT NULL, `displayName` TEXT NOT NULL, `participantKind` TEXT NOT NULL, `score` INTEGER NOT NULL, `correctTriviaRounds` INTEGER NOT NULL, `acceptedCameraRounds` INTEGER NOT NULL, `rank` INTEGER NOT NULL, `profileId` TEXT, PRIMARY KEY(`gameId`, `participantId`), FOREIGN KEY(`gameId`) REFERENCES `completed_games`(`gameId`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`profileId`) REFERENCES `player_profiles`(`profileId`) ON UPDATE NO ACTION ON DELETE SET NULL )",
+        "fields": [
+          {
+            "fieldPath": "gameId",
+            "columnName": "gameId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "participantId",
+            "columnName": "participantId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "participantOrder",
+            "columnName": "participantOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "displayName",
+            "columnName": "displayName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "participantKind",
+            "columnName": "participantKind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "score",
+            "columnName": "score",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correctTriviaRounds",
+            "columnName": "correctTriviaRounds",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "acceptedCameraRounds",
+            "columnName": "acceptedCameraRounds",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rank",
+            "columnName": "rank",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "profileId",
+            "columnName": "profileId",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "gameId",
+            "participantId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_completed_game_participants_gameId_participantOrder",
+            "unique": true,
+            "columnNames": [
+              "gameId",
+              "participantOrder"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_completed_game_participants_gameId_participantOrder` ON `${TABLE_NAME}` (`gameId`, `participantOrder`)"
+          },
+          {
+            "name": "index_completed_game_participants_profileId",
+            "unique": false,
+            "columnNames": [
+              "profileId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_completed_game_participants_profileId` ON `${TABLE_NAME}` (`profileId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "completed_games",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "gameId"
+            ],
+            "referencedColumns": [
+              "gameId"
+            ]
+          },
+          {
+            "table": "player_profiles",
+            "onDelete": "SET NULL",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "profileId"
+            ],
+            "referencedColumns": [
+              "profileId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "completed_game_rounds",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`gameId` TEXT NOT NULL, `roundNumber` INTEGER NOT NULL, `roundType` TEXT NOT NULL, `participantId` TEXT NOT NULL, `judgeId` TEXT, `outcome` TEXT NOT NULL, `questionId` TEXT, `questionText` TEXT, `selectedAnswer` TEXT, `correctAnswer` TEXT, `explanation` TEXT, `categoryId` TEXT, `difficulty` TEXT, PRIMARY KEY(`gameId`, `roundNumber`), FOREIGN KEY(`gameId`) REFERENCES `completed_games`(`gameId`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`gameId`, `participantId`) REFERENCES `completed_game_participants`(`gameId`, `participantId`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`gameId`, `judgeId`) REFERENCES `completed_game_participants`(`gameId`, `participantId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "gameId",
+            "columnName": "gameId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "roundNumber",
+            "columnName": "roundNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "roundType",
+            "columnName": "roundType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "participantId",
+            "columnName": "participantId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "judgeId",
+            "columnName": "judgeId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "outcome",
+            "columnName": "outcome",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "questionId",
+            "columnName": "questionId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "questionText",
+            "columnName": "questionText",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "selectedAnswer",
+            "columnName": "selectedAnswer",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "correctAnswer",
+            "columnName": "correctAnswer",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "explanation",
+            "columnName": "explanation",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "categoryId",
+            "columnName": "categoryId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "difficulty",
+            "columnName": "difficulty",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "gameId",
+            "roundNumber"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_completed_game_rounds_gameId_participantId",
+            "unique": false,
+            "columnNames": [
+              "gameId",
+              "participantId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_completed_game_rounds_gameId_participantId` ON `${TABLE_NAME}` (`gameId`, `participantId`)"
+          },
+          {
+            "name": "index_completed_game_rounds_gameId_judgeId",
+            "unique": false,
+            "columnNames": [
+              "gameId",
+              "judgeId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_completed_game_rounds_gameId_judgeId` ON `${TABLE_NAME}` (`gameId`, `judgeId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "completed_games",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "gameId"
+            ],
+            "referencedColumns": [
+              "gameId"
+            ]
+          },
+          {
+            "table": "completed_game_participants",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "gameId",
+              "participantId"
+            ],
+            "referencedColumns": [
+              "gameId",
+              "participantId"
+            ]
+          },
+          {
+            "table": "completed_game_participants",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "gameId",
+              "judgeId"
+            ],
+            "referencedColumns": [
+              "gameId",
+              "participantId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "question_reports",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`reportId` TEXT NOT NULL, `questionId` TEXT NOT NULL, `issueType` TEXT NOT NULL, `note` TEXT, `createdAtEpochMillis` INTEGER NOT NULL, PRIMARY KEY(`reportId`))",
+        "fields": [
+          {
+            "fieldPath": "reportId",
+            "columnName": "reportId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "questionId",
+            "columnName": "questionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "issueType",
+            "columnName": "issueType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "note",
+            "columnName": "note",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "createdAtEpochMillis",
+            "columnName": "createdAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "reportId"
+          ]
+        }
+      },
+      {
+        "tableName": "player_profiles",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`profileId` TEXT NOT NULL, `displayName` TEXT NOT NULL, `createdAtEpochMillis` INTEGER NOT NULL, PRIMARY KEY(`profileId`))",
+        "fields": [
+          {
+            "fieldPath": "profileId",
+            "columnName": "profileId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "displayName",
+            "columnName": "displayName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAtEpochMillis",
+            "columnName": "createdAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "profileId"
+          ]
+        }
+      },
+      {
+        "tableName": "profile_achievements",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`profileId` TEXT NOT NULL, `achievementId` TEXT NOT NULL, `unlockedAtEpochMillis` INTEGER NOT NULL, PRIMARY KEY(`profileId`, `achievementId`), FOREIGN KEY(`profileId`) REFERENCES `player_profiles`(`profileId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "profileId",
+            "columnName": "profileId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "achievementId",
+            "columnName": "achievementId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unlockedAtEpochMillis",
+            "columnName": "unlockedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "profileId",
+            "achievementId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_profile_achievements_profileId",
+            "unique": false,
+            "columnNames": [
+              "profileId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_profile_achievements_profileId` ON `${TABLE_NAME}` (`profileId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "player_profiles",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "profileId"
+            ],
+            "referencedColumns": [
+              "profileId"
+            ]
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '12ce39d28892c47e9f4f7f7f15b09cec')"
+    ]
+  }
+}

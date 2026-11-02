@@ -1,0 +1,30 @@
+# Gradle
+.gradle/
+**/build/
+
+# Android SDK configuration
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+
+# Native build files
+.externalNativeBuild/
+.cxx/
+
+# Generated captures
+captures/
+
+# Signing credentials
+*.jks
+*.keystore
+keystore.properties
+
+# Environment files and secrets
+.env
+.env.*
+
+# Operating system files
+.DS_Store
+Thumbs.db
