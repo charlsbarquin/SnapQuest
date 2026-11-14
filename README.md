@@ -12,19 +12,19 @@ Download SnapQuest for Android from the official GitHub Releases page.
 
 **[Download the Latest SnapQuest Release](https://github.com/charlsbarquin/SnapQuest/releases/latest)**
 
-The latest published release verified for this repository is **SnapQuest v1.0.0**.
+The latest published release verified for this repository is **SnapQuest v1.0.1**.
 
 | APK detail | Verified value |
 | --- | --- |
-| Download | [`SnapQuest-v1.0.0.apk`](https://github.com/charlsbarquin/SnapQuest/releases/latest/download/SnapQuest-v1.0.0.apk) |
-| Application version | `1.0` (version code `1`) |
+| Download | [`SnapQuest-v1.0.1.apk`](https://github.com/charlsbarquin/SnapQuest/releases/latest/download/SnapQuest-v1.0.1.apk) |
+| Application version | `1.0.1` (version code `2`) |
 | Package | `com.charlsemilbarquin.frameandfact` |
 | Minimum Android | Android 8.0 Oreo / API 26 |
-| File size | 15,402,275 bytes |
-| SHA-256 | `23C267C45465B8B2CA505309CBD07DBAACD96252906A007B7FA320271AF60C0A` |
+| File size | 15,450,615 bytes |
+| SHA-256 | `B22881BD9B438F9CA66D97011738D228D2CEFD022A15403B1966A3AAFD8EC581` |
 | Signing certificate SHA-256 | `c93364918db34f0a69ec167d4139fa497d72784cd348b7722a6632d35bbba437` |
 
-The published v1.0.0 APK is an existing signed build; it predates the current local working-tree changes and is not presented as a build of them. The current Gradle release build is unsigned and is not a user-downloadable release. Any release for newer source must use the original signing key and receive project-owner approval before public publication.
+The published v1.0.1 APK is signed with the original SnapQuest release key and was built from the source at its release tag. The preserved v1.0.0 APK is an earlier build. Gradle's standard release task still creates an unsigned APK; use Android Studio's signed APK workflow with the original key for future releases.
 
 ### Installation
 
@@ -295,7 +295,7 @@ Connected UI, migration, and instrumentation tests were not run during this veri
 
 ## Project Status
 
-SnapQuest includes local account registration and sign-in, Solo and pass-and-play Multiplayer, trivia and Find & Frame rounds, practice modes, Room-backed history and account-scoped records, statistics, profiles, settings, and help/tutorial screens. Current local builds and JVM tests pass. The published v1.0.0 APK is verified; it does not include the later uncommitted changes in the current working tree. A new signed release for those changes remains pending.
+SnapQuest includes local account registration and sign-in, Solo and pass-and-play Multiplayer, trivia and Find & Frame rounds, practice modes, Room-backed history and account-scoped records, statistics, profiles, settings, and help/tutorial screens. The v1.0.1 source is pushed to `main`, and its signed APK is published on GitHub Releases. The preserved v1.0.0 APK remains an earlier build.
 
 ## Troubleshooting
 
@@ -354,13 +354,13 @@ No separate external-asset credits file was identified in the previous documenta
 
 SnapQuest's source code is available at [charlsbarquin/SnapQuest](https://github.com/charlsbarquin/SnapQuest).
 
-The current Gradle release build is unsigned. The preserved signed v1.0.0 APK predates the current working-tree changes, so it must not be presented as a build of the current source. Before publishing a release:
+The current Gradle release build is unsigned. The published v1.0.1 APK was signed through Android Studio with the original release key. For future releases:
 
 1. Build and test the intended source revision.
 2. Sign the APK with the original signing key and verify its certificate.
 3. Use a version tag that does not conflict with an existing tag or release.
 4. Attach the signed APK and its SHA-256 checksum to the GitHub Release.
-5. Obtain project-owner approval before publishing publicly.
+5. Publish the GitHub Release.
 6. Verify the published release page and APK download, then confirm the latest-release link above resolves to it.
 
 The latest-release link provides an APK only when a release with an APK asset has been published.
