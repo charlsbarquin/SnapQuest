@@ -31,10 +31,10 @@ import com.charlsemilbarquin.frameandfact.ui.components.SnapQuestSectionHeader
 fun IncorrectAnswerReviewScreen(
     game: CompletedGameHistoryRecord?,
     isLoading: Boolean,
+    modifier: Modifier = Modifier,
     loadError: String? = null,
     onBack: () -> Unit,
-    onRetry: () -> Unit,
-    modifier: Modifier = Modifier
+    onRetry: () -> Unit
 ) {
     val reviewData = remember(game?.gameId, game?.rounds) { game?.incorrectAnswerReviewData() }
     var currentIndex by remember(game?.gameId) { mutableIntStateOf(0) }

@@ -4,15 +4,17 @@ import android.Manifest
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.Intent
+import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.os.Handler
 import android.os.Looper
 import android.graphics.BitmapFactory
 import android.graphics.Matrix
-import android.media.ExifInterface
+import androidx.exifinterface.media.ExifInterface
 import android.net.Uri
 import android.provider.Settings
+import android.util.Log
 import android.view.Surface
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -129,6 +131,7 @@ fun FindAndFrameScreen(
             if (event == Lifecycle.Event.ON_RESUME) {
                 val granted = ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA) ==
                     PackageManager.PERMISSION_GRANTED
+                logCameraDiagnostic(context, "Activity resumed; cameraPermissionGranted=$granted")
                 if (returningFromSettings) {
                     returningFromSettings = false
                     cameraUi = if (granted) {
@@ -149,6 +152,7 @@ fun FindAndFrameScreen(
     }
 
     val permissionLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+        logCameraDiagnostic(context, "Runtime camera permission request completed; granted=$granted")
         cameraUi = if (granted) {
             CameraRoundUiReducer.permissionGranted(cameraUi)
         } else {
@@ -162,6 +166,7 @@ fun FindAndFrameScreen(
     fun startCamera() {
         val granted = ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA) ==
             PackageManager.PERMISSION_GRANTED
+        logCameraDiagnostic(context, "Start Camera selected; cameraPermissionGranted=$granted")
         cameraUi = if (granted) CameraRoundUiReducer.permissionGranted(cameraUi)
         else CameraRoundUiReducer.explainPermission(cameraUi)
     }
@@ -551,12 +556,21 @@ private fun CameraPreviewPane(
         val timeoutHandler = Handler(Looper.getMainLooper())
         val streamTimeout = Runnable {
             if (!disposed.get() && !readyState.value) {
+                logCameraFailure(
+                    context,
+                    "Preview stream timed out; imageCaptureInitialized=${captureState.value != null}; " +
+                        "lifecycle=${activity?.lifecycle?.currentState}"
+                )
                 latestOnError("The camera opened, but no live preview appeared. Try again or skip this round.")
             }
         }
         val lifecycleOwner = activity
         val streamObserver = Observer<PreviewView.StreamState> { streamState ->
             if (!disposed.get()) {
+                logCameraDiagnostic(
+                    context,
+                    "PreviewView streamState=$streamState; lifecycle=${lifecycleOwner?.lifecycle?.currentState}"
+                )
                 when (streamState) {
                     PreviewView.StreamState.STREAMING -> {
                         timeoutHandler.removeCallbacks(streamTimeout)
@@ -580,6 +594,7 @@ private fun CameraPreviewPane(
         val listener = Runnable {
             if (disposed.get()) return@Runnable
             try {
+                logCameraDiagnostic(context, "CameraX provider initialization completed")
                 val provider = providerFuture.get()
                 boundProvider = provider
                 val selector = when {
@@ -603,13 +618,20 @@ private fun CameraPreviewPane(
                     provider.unbindAll()
                 } else {
                     captureState.value = imageCapture
+                    logCameraDiagnostic(
+                        context,
+                        "CameraX use cases bound; imageCaptureInitialized=${captureState.value != null}; " +
+                            "lifecycle=${activity?.lifecycle?.currentState}"
+                    )
                     latestOnBindingCompleted()
                     if (!readyState.value) {
                         timeoutHandler.postDelayed(streamTimeout, PREVIEW_STREAM_TIMEOUT_MS)
                     }
                 }
-            } catch (_: Exception) {
+            } catch (error: Exception) {
                 boundProvider?.unbindAll()
+                val cause = error.cause ?: error
+                logCameraFailure(context, "CameraX initialization or use-case binding failed (${cause.javaClass.simpleName})")
                 if (!disposed.get()) {
                     latestOnError("The camera could not be opened. Check whether another app is using it, then retry or skip this round.")
                 }
@@ -687,6 +709,10 @@ private fun CameraPreviewPane(
                                 override fun onError(exception: ImageCaptureException) {
                                     busyState.value = false
                                     photoStore.deleteCapture(file)
+                                    logCameraFailure(
+                                        context,
+                                        "CameraX image capture failed (${exception.javaClass.simpleName})"
+                                    )
                                     if (!disposed.get()) {
                                         latestOnError("The photo could not be captured. Retry or skip this round.")
                                     }
@@ -831,4 +857,18 @@ private fun Context.findActivity(): ComponentActivity? {
         current = current.baseContext
     }
     return current as? ComponentActivity
+}
+
+private const val CAMERA_DIAGNOSTICS_TAG = "SnapQuestCamera"
+
+private fun logCameraDiagnostic(context: Context, message: String) {
+    if (context.applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE != 0) {
+        Log.d(CAMERA_DIAGNOSTICS_TAG, message)
+    }
+}
+
+private fun logCameraFailure(context: Context, message: String) {
+    if (context.applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE != 0) {
+        Log.e(CAMERA_DIAGNOSTICS_TAG, message)
+    }
 }

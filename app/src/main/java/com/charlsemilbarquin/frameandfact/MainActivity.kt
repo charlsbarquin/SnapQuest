@@ -19,6 +19,7 @@ import com.charlsemilbarquin.frameandfact.data.settings.SettingsReadState
 import com.charlsemilbarquin.frameandfact.data.settings.createAppSettingsRepository
 import com.charlsemilbarquin.frameandfact.ui.navigation.AppNavigation
 import com.charlsemilbarquin.frameandfact.ui.navigation.AppNavigationViewModel
+import com.charlsemilbarquin.frameandfact.feature.auth.AuthViewModel
 import com.charlsemilbarquin.frameandfact.ui.theme.FrameFactTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,6 +27,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         val navigationViewModel = ViewModelProvider(this)[AppNavigationViewModel::class.java]
+        val authViewModel = ViewModelProvider(this)[AuthViewModel::class.java]
         setContent {
             val appContext = LocalContext.current.applicationContext
             val view = LocalView.current
@@ -47,7 +49,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
             FrameFactTheme(darkTheme = darkTheme) {
-                AppNavigation(settingsRepository, settingsState, navigationViewModel)
+                AppNavigation(settingsRepository, settingsState, navigationViewModel, authViewModel)
             }
         }
     }

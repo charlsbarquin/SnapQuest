@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- Keep adaptive launcher icons and density-specific bitmap fallbacks together. -->
+    <issue id="IconXmlAndPng">
+        <ignore path="src/main/res/mipmap-xxxhdpi/ic_launcher.webp" />
+        <ignore path="src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" />
+    </issue>
+</lint>

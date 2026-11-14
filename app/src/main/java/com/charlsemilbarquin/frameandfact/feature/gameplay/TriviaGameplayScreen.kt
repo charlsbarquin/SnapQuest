@@ -68,8 +68,8 @@ fun TriviaGameplayScreen(
     onRetrySave: () -> Unit,
     onPlayAgain: () -> Unit,
     onOpenHistory: () -> Unit,
+    modifier: Modifier = Modifier,
     onReportQuestion: (String) -> Unit = {},
-    modifier: Modifier = Modifier
 ) {
     when {
         state.session.status == GameStatus.CANCELLED -> MessageScreen("This game was cancelled.", modifier)

@@ -12,6 +12,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.charlsemilbarquin.frameandfact.MainActivity
 import com.charlsemilbarquin.frameandfact.feature.gameplay.TriviaGameplayReducer
+import org.junit.After
+import org.junit.Assume.assumeTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -20,16 +22,23 @@ import org.junit.runner.RunWith
 class MainActivityRotationTest {
     @get:Rule
     val compose = createAndroidComposeRule<MainActivity>()
+    private var startedTestGameId: String? = null
+
+    @After
+    fun discardOnlyGameStartedByThisTest() {
+        val gameId = startedTestGameId ?: return
+        compose.activityRule.scenario.onActivity { activity ->
+            val navigationState = ViewModelProvider(activity)[AppNavigationViewModel::class.java]
+            if (navigationState.gameplayState.value?.session?.id?.value == gameId) {
+                navigationState.resetAfterLogout()
+            }
+        }
+        compose.waitForIdle()
+    }
 
     @Test
     fun activeGameRouteAndRoundSurviveActivityRecreation() {
-        compose.waitUntil(timeoutMillis = 20_000) {
-            compose.onAllNodesWithTag("home-ready").fetchSemanticsNodes().isNotEmpty() ||
-                compose.onAllNodesWithText("Skip").fetchSemanticsNodes().isNotEmpty()
-        }
-        if (compose.onAllNodesWithText("Skip").fetchSemanticsNodes().isNotEmpty()) {
-            compose.onNodeWithText("Skip").performClick()
-        }
+        requireExistingSignedInHomeSession()
         compose.waitUntil(timeoutMillis = 20_000) {
             compose.onAllNodesWithTag("home-ready").fetchSemanticsNodes().isNotEmpty()
         }
@@ -38,6 +47,7 @@ class MainActivityRotationTest {
         compose.waitUntil(timeoutMillis = 20_000) {
             compose.onAllNodesWithText("Round 1 of 8").fetchSemanticsNodes().isNotEmpty()
         }
+        rememberStartedTestGame()
 
         compose.activityRule.scenario.recreate()
 
@@ -50,13 +60,7 @@ class MainActivityRotationTest {
 
     @Test
     fun activeCameraRoundAndParticipantSurviveActivityRecreation() {
-        compose.waitUntil(timeoutMillis = 20_000) {
-            compose.onAllNodesWithTag("home-ready").fetchSemanticsNodes().isNotEmpty() ||
-                compose.onAllNodesWithText("Skip").fetchSemanticsNodes().isNotEmpty()
-        }
-        if (compose.onAllNodesWithText("Skip").fetchSemanticsNodes().isNotEmpty()) {
-            compose.onNodeWithText("Skip").performClick()
-        }
+        requireExistingSignedInHomeSession()
         compose.waitUntil(timeoutMillis = 20_000) {
             compose.onAllNodesWithTag("home-ready").fetchSemanticsNodes().isNotEmpty()
         }
@@ -66,6 +70,7 @@ class MainActivityRotationTest {
         compose.waitUntil(timeoutMillis = 20_000) {
             compose.onAllNodesWithText("Round 1 of 8").fetchSemanticsNodes().isNotEmpty()
         }
+        rememberStartedTestGame()
         val navigationState = ViewModelProvider(compose.activity)[AppNavigationViewModel::class.java]
         compose.runOnIdle {
             var gameplay = requireNotNull(navigationState.gameplayState.value)
@@ -92,5 +97,21 @@ class MainActivityRotationTest {
         compose.onNodeWithText("Player: Player").performScrollTo().assertIsDisplayed()
         compose.onNodeWithText("Current score: 0 points").performScrollTo().assertIsDisplayed()
         compose.onNodeWithText("Start Camera").performScrollTo().assertIsDisplayed()
+    }
+
+    private fun requireExistingSignedInHomeSession() {
+        compose.waitUntil(timeoutMillis = 30_000) {
+            compose.onAllNodesWithTag("home-ready").fetchSemanticsNodes().isNotEmpty() ||
+                compose.onAllNodesWithTag("login-submit").fetchSemanticsNodes().isNotEmpty()
+        }
+        assumeTrue(
+            "Sign in manually before the rotation test; it will not create or modify a production account.",
+            compose.onAllNodesWithTag("home-ready").fetchSemanticsNodes().isNotEmpty()
+        )
+    }
+
+    private fun rememberStartedTestGame() {
+        val navigationState = ViewModelProvider(compose.activity)[AppNavigationViewModel::class.java]
+        startedTestGameId = navigationState.gameplayState.value?.session?.id?.value
     }
 }

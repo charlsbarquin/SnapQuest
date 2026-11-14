@@ -22,6 +22,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -59,10 +60,10 @@ fun ShortTriviaScreen(
     var names by remember { mutableStateOf(listOf("Player")) }
     var categoryId by remember { mutableStateOf(ApprovedCategories.all.first().id) }
     var difficulty by remember { mutableStateOf(Difficulty.EASY) }
-    var questionCount by remember(type) { mutableStateOf(if (type == ShortSessionType.QUICK_PLAY) 5 else 5) }
+    var questionCount by remember(type) { mutableIntStateOf(5) }
     var session by remember { mutableStateOf<ShortTriviaSession?>(null) }
     var lastSavedSessionId by remember { mutableStateOf<String?>(null) }
-    var saveAttempt by remember { mutableStateOf(0) }
+    var saveAttempt by remember { mutableIntStateOf(0) }
     var saveError by remember { mutableStateOf(false) }
     val scrollState = rememberScrollState()
     val eligible = if (type == ShortSessionType.CATEGORY_FOCUSED) {

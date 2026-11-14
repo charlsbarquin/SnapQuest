@@ -24,10 +24,13 @@ interface QuestionReportRepository {
     suspend fun deleteReport(reportId: String)
 }
 
-class RoomQuestionReportRepository(database: GameHistoryDatabase) : QuestionReportRepository {
+class RoomQuestionReportRepository(
+    database: GameHistoryDatabase,
+    private val ownerAccountId: String? = null
+) : QuestionReportRepository {
     private val dao = database.completedGameDao()
 
-    override fun observeReports(): Flow<List<QuestionReport>> = dao.observeQuestionReports().map { rows ->
+    override fun observeReports(): Flow<List<QuestionReport>> = dao.observeQuestionReports(ownerAccountId).map { rows ->
         rows.map { it.toReport() }
     }
 
@@ -39,13 +42,14 @@ class RoomQuestionReportRepository(database: GameHistoryDatabase) : QuestionRepo
                 questionId = questionId,
                 issueType = issueType.name,
                 note = note?.trim()?.takeIf(String::isNotEmpty),
-                createdAtEpochMillis = System.currentTimeMillis()
+                createdAtEpochMillis = System.currentTimeMillis(),
+                ownerAccountId = ownerAccountId
             )
         )
     }
 
     override suspend fun deleteReport(reportId: String) {
-        dao.deleteQuestionReport(reportId)
+        dao.deleteQuestionReport(reportId, ownerAccountId)
     }
 
     private fun QuestionReportEntity.toReport() = QuestionReport(

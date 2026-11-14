@@ -16,12 +16,15 @@ interface ShortGameSummaryRepository {
     suspend fun clear(): Int
 }
 
-class RoomShortGameSummaryRepository(database: GameHistoryDatabase) : ShortGameSummaryRepository {
+class RoomShortGameSummaryRepository(
+    database: GameHistoryDatabase,
+    private val ownerAccountId: String? = null
+) : ShortGameSummaryRepository {
     private val dao = database.completedGameDao()
     private val gson = Gson()
     private val participantListType = object : TypeToken<List<ShortGameParticipantResult>>() {}.type
 
-    override fun observeSummaries(): Flow<List<ShortGameSummary>> = dao.observeShortGameSummaries().map { rows ->
+    override fun observeSummaries(): Flow<List<ShortGameSummary>> = dao.observeShortGameSummaries(ownerAccountId).map { rows ->
         rows.map { row ->
             ShortGameSummary(
                 sessionId = row.sessionId,
@@ -45,11 +48,12 @@ class RoomShortGameSummaryRepository(database: GameHistoryDatabase) : ShortGameS
                 questionCount = summary.questionCount,
                 categoryId = summary.categoryId,
                 difficulty = summary.difficulty,
-                participantsJson = gson.toJson(summary.participants)
+                participantsJson = gson.toJson(summary.participants),
+                ownerAccountId = ownerAccountId
             )
         ) != -1L
         return if (inserted) SaveShortGameResult.INSERTED else SaveShortGameResult.ALREADY_PRESENT
     }
 
-    override suspend fun clear(): Int = dao.deleteAllShortGameSummaries()
+    override suspend fun clear(): Int = dao.deleteAllShortGameSummaries(ownerAccountId)
 }

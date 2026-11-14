@@ -49,8 +49,8 @@ fun GameSetupScreen(
     onStartGame: () -> Unit,
     onEditSetup: () -> Unit,
     onRetryContent: () -> Unit,
+    modifier: Modifier = Modifier,
     profiles: List<LocalPlayerProfile> = emptyList(),
-    modifier: Modifier = Modifier
 ) {
     if (session != null) {
         SessionReadyScreen(session, onStartGame, onEditSetup, modifier)

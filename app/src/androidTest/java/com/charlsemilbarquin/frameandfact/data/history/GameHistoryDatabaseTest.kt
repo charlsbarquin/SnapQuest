@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.charlsemilbarquin.frameandfact.data.local.history.AuthAccountEntity
 import com.charlsemilbarquin.frameandfact.data.local.history.GameHistoryDatabase
 import com.charlsemilbarquin.frameandfact.domain.game.ParticipantKind
 import com.charlsemilbarquin.frameandfact.domain.game.GameId
@@ -47,7 +48,7 @@ class GameHistoryDatabaseTest {
             assertEquals(SaveHistoryResult.AlreadyPresent, repository.saveCompletedGame(record))
 
             val saved = repository.observeCompletedGames().first().single()
-            assertEquals(1, database.completedGameDao().observeAll().first().size)
+            assertEquals(1, database.completedGameDao().observeAll(null).first().size)
             assertEquals(listOf("Ada", "Grace"), saved.participants.map { it.displayName })
             assertEquals(listOf(40, 40), saved.participants.map { it.score })
             assertTrue(saved.isTie)
@@ -296,6 +297,80 @@ class GameHistoryDatabaseTest {
         }
     }
 
+    @Test
+    fun persistentGameDataIsIsolatedBetweenAccounts() = runBlocking {
+        val database = inMemoryDatabase()
+        try {
+            insertAccount(database, "account-a")
+            insertAccount(database, "account-b")
+            val historyA = RoomGameHistoryRepository(database, "account-a")
+            val historyB = RoomGameHistoryRepository(database, "account-b")
+            val profilesA = RoomLocalPlayerProfileRepository(database, "account-a")
+            val profilesB = RoomLocalPlayerProfileRepository(database, "account-b")
+            val reportsA = RoomQuestionReportRepository(database, "account-a")
+            val reportsB = RoomQuestionReportRepository(database, "account-b")
+            val summariesA = RoomShortGameSummaryRepository(database, "account-a")
+            val summariesB = RoomShortGameSummaryRepository(database, "account-b")
+
+            historyA.saveCompletedGame(record("account-a-game", 100L))
+            historyB.saveCompletedGame(record("account-b-game", 200L))
+            val profileA = profilesA.createProfile("Private Player A")
+            val profileB = profilesB.createProfile("Private Player B")
+            reportsA.addReport("science-a", QuestionIssueType.OTHER, null)
+            reportsB.addReport("science-b", QuestionIssueType.OTHER, null)
+            val summaryA = shortSummary("account-a-short")
+            val summaryB = shortSummary("account-b-short")
+            summariesA.save(summaryA)
+            summariesB.save(summaryB)
+
+            assertEquals(listOf("account-a-game"), historyA.observeCompletedGames().first().map { it.gameId })
+            assertEquals(listOf("account-b-game"), historyB.observeCompletedGames().first().map { it.gameId })
+            assertEquals(listOf("Private Player A"), profilesA.observeProfiles().first().map { it.displayName })
+            assertEquals(listOf("Private Player B"), profilesB.observeProfiles().first().map { it.displayName })
+            assertEquals(listOf("science-a"), reportsA.observeReports().first().map { it.questionId })
+            assertEquals(listOf("science-b"), reportsB.observeReports().first().map { it.questionId })
+            assertEquals(listOf(summaryA), summariesA.observeSummaries().first())
+            assertEquals(listOf(summaryB), summariesB.observeSummaries().first())
+
+            assertFalse(profilesB.renameProfile(profileA.profileId, "Stolen Rename"))
+            assertTrue(profilesB.deleteProfile(profileA.profileId).not())
+            reportsB.deleteReport(reportsA.observeReports().first().single().reportId)
+            assertEquals(1, historyB.clearHistory())
+            assertEquals(listOf("account-a-game"), historyA.observeCompletedGames().first().map { it.gameId })
+            assertEquals(listOf("science-a"), reportsA.observeReports().first().map { it.questionId })
+            assertEquals(profileB.profileId, profilesB.observeProfiles().first().single().profileId)
+        } finally {
+            database.close()
+        }
+    }
+
+    @Test
+    fun firstAccountClaimsLegacyRowsWithoutDiscardingThem() = runBlocking {
+        val database = inMemoryDatabase()
+        try {
+            val legacyHistory = RoomGameHistoryRepository(database)
+            val legacyProfiles = RoomLocalPlayerProfileRepository(database)
+            val legacyReports = RoomQuestionReportRepository(database)
+            val legacySummaries = RoomShortGameSummaryRepository(database)
+            legacyHistory.saveCompletedGame(record("legacy-game", 100L))
+            legacyProfiles.createProfile("Legacy Player")
+            legacyReports.addReport("legacy-question", QuestionIssueType.OTHER, null)
+            legacySummaries.save(shortSummary("legacy-short"))
+
+            insertAccount(database, "first-account")
+            val firstAccountHistory = RoomGameHistoryRepository(database, "first-account")
+            firstAccountHistory.claimLegacyRecords()
+
+            assertEquals(listOf("legacy-game"), firstAccountHistory.observeCompletedGames().first().map { it.gameId })
+            assertEquals(listOf("Legacy Player"), RoomLocalPlayerProfileRepository(database, "first-account").observeProfiles().first().map { it.displayName })
+            assertEquals(listOf("legacy-question"), RoomQuestionReportRepository(database, "first-account").observeReports().first().map { it.questionId })
+            assertEquals(listOf("legacy-short"), RoomShortGameSummaryRepository(database, "first-account").observeSummaries().first().map { it.sessionId })
+            assertTrue(legacyHistory.observeCompletedGames().first().isEmpty())
+        } finally {
+            database.close()
+        }
+    }
+
     private fun rowCount(database: GameHistoryDatabase, table: String): Int =
         database.openHelper.readableDatabase.query("SELECT COUNT(*) FROM $table").use { cursor ->
             cursor.moveToFirst()
@@ -306,6 +381,31 @@ class GameHistoryDatabaseTest {
         context,
         GameHistoryDatabase::class.java
     ).allowMainThreadQueries().build()
+
+    private suspend fun insertAccount(database: GameHistoryDatabase, id: String) {
+        database.authAccountDao().insert(
+            AuthAccountEntity(
+                accountId = id,
+                fullName = id,
+                username = id,
+                normalizedUsername = id,
+                normalizedEmail = null,
+                passwordSaltBase64 = "test-salt",
+                passwordHashBase64 = "test-hash",
+                createdAtEpochMillis = if (id == "account-a") 1L else if (id == "account-b") 2L else 1L
+            )
+        )
+    }
+
+    private fun shortSummary(sessionId: String) = ShortGameSummary(
+        sessionId = sessionId,
+        sessionType = com.charlsemilbarquin.frameandfact.domain.game.ShortSessionType.QUICK_PLAY,
+        completedAtEpochMillis = 500L,
+        questionCount = 5,
+        categoryId = null,
+        difficulty = null,
+        participants = listOf(ShortGameParticipantResult("p1", "Player", 30, 30, 3, 2))
+    )
 
     private fun record(id: String, completedAt: Long) = CompletedGameHistoryRecord(
         gameId = id,

@@ -8,5 +8,6 @@
 <full-backup-content>
     <!-- Keep history and temporary captures on this device only. -->
     <exclude domain="database" path="." />
+        <exclude domain="sharedpref" path="snapquest_auth_session.xml" />
     <exclude domain="file" path="datastore/frame_and_fact_settings.preferences_pb" />
 </full-backup-content>

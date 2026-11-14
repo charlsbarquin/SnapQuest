@@ -1,9 +1,12 @@
 package com.charlsemilbarquin.frameandfact.ui.navigation
 
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.platform.LocalContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.CancellationException
@@ -118,27 +121,67 @@ import com.charlsemilbarquin.frameandfact.feature.help.RulesHelpScreen
 import com.charlsemilbarquin.frameandfact.feature.help.InteractiveTutorialScreen
 import com.charlsemilbarquin.frameandfact.feature.settings.ClearHistoryUiState
 import com.charlsemilbarquin.frameandfact.feature.settings.SettingsScreen
+import com.charlsemilbarquin.frameandfact.feature.auth.AuthSessionState
+import com.charlsemilbarquin.frameandfact.feature.auth.AuthViewModel
+import com.charlsemilbarquin.frameandfact.feature.auth.AuthenticationGate
+import com.charlsemilbarquin.frameandfact.feature.about.AboutScreen
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
 import java.util.concurrent.atomic.AtomicBoolean
+import java.io.File
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AppNavigation(
     settingsRepository: AppSettingsRepository,
     settingsReadState: SettingsReadState,
-    navigationViewModel: AppNavigationViewModel
+    navigationViewModel: AppNavigationViewModel,
+    authViewModel: AuthViewModel,
+    cameraCacheDirectory: File? = null
+) {
+    val authState by authViewModel.session.collectAsState()
+    var hadAuthenticatedSession by remember { mutableStateOf(false) }
+    LaunchedEffect(authState) {
+        when (authState) {
+            is AuthSessionState.SignedIn -> hadAuthenticatedSession = true
+            AuthSessionState.SignedOut -> if (hadAuthenticatedSession) {
+                navigationViewModel.resetAfterLogout()
+                hadAuthenticatedSession = false
+            }
+            AuthSessionState.Loading -> Unit
+        }
+    }
+    when (val state = authState) {
+        AuthSessionState.Loading -> androidx.compose.foundation.layout.Box(
+            Modifier.fillMaxSize(), contentAlignment = Alignment.Center
+        ) { Text("Loading SnapQuest…") }
+        AuthSessionState.SignedOut -> AuthenticationGate(authViewModel)
+        is AuthSessionState.SignedIn -> SignedInAppNavigation(
+            settingsRepository, settingsReadState, navigationViewModel, authViewModel, state.user, cameraCacheDirectory
+        )
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun SignedInAppNavigation(
+    settingsRepository: AppSettingsRepository,
+    settingsReadState: SettingsReadState,
+    navigationViewModel: AppNavigationViewModel,
+    authViewModel: AuthViewModel,
+    signedInUser: com.charlsemilbarquin.frameandfact.data.auth.LocalAuthUser,
+    cameraCacheDirectory: File?
 ) {
     val backStack = navigationViewModel.backStack
+    val authFeedback by authViewModel.feedback.collectAsState()
     var setupDraft by navigationViewModel.setupDraft
     var contentState by navigationViewModel.contentState
     var createdSession by navigationViewModel.createdSession
     var formMessage by navigationViewModel.formMessage
     var gameplayState by navigationViewModel.gameplayState
     var showCancelConfirmation by navigationViewModel.showCancelConfirmation
-    var contentReloadToken by remember { mutableStateOf(0) }
-    var historyReloadToken by remember { mutableStateOf(0) }
+    var contentReloadToken by remember { mutableIntStateOf(0) }
+    var historyReloadToken by remember { mutableIntStateOf(0) }
     var historyState by remember { mutableStateOf<HistoryUiState>(HistoryUiState.Loading) }
     var completionSaveState by navigationViewModel.completionSaveState
     var completionRecord by navigationViewModel.completionRecord
@@ -158,19 +201,29 @@ fun AppNavigation(
     var automaticTutorialChecked by remember { mutableStateOf(false) }
     var clearHistoryState by remember { mutableStateOf<ClearHistoryUiState>(ClearHistoryUiState.Idle) }
     val context = LocalContext.current
-    val photoStore = remember(context.cacheDir) { CameraPhotoStore(context.cacheDir) }
-    val historyRepository: GameHistoryRepository = remember(context.applicationContext) {
-        RoomGameHistoryRepository(GameHistoryDatabase.getInstance(context.applicationContext))
+    val photoDirectory = cameraCacheDirectory ?: context.cacheDir
+    val photoStore = remember(photoDirectory) { CameraPhotoStore(photoDirectory) }
+    val historyRepository: GameHistoryRepository = remember(context.applicationContext, signedInUser.accountId) {
+        RoomGameHistoryRepository(GameHistoryDatabase.getInstance(context.applicationContext), signedInUser.accountId)
     }
     val completionSaver = remember(historyRepository) { CompletedGameHistorySaver(historyRepository) }
-    val questionReportRepository = remember(context.applicationContext) {
-        RoomQuestionReportRepository(GameHistoryDatabase.getInstance(context.applicationContext))
+    val questionReportRepository = remember(context.applicationContext, signedInUser.accountId) {
+        RoomQuestionReportRepository(GameHistoryDatabase.getInstance(context.applicationContext), signedInUser.accountId)
     }
-    val profileRepository = remember(context.applicationContext) {
-        RoomLocalPlayerProfileRepository(GameHistoryDatabase.getInstance(context.applicationContext))
+    val profileRepository = remember(context.applicationContext, signedInUser.accountId) {
+        RoomLocalPlayerProfileRepository(GameHistoryDatabase.getInstance(context.applicationContext), signedInUser.accountId)
     }
-    val shortGameSummaryRepository: ShortGameSummaryRepository = remember(context.applicationContext) {
-        RoomShortGameSummaryRepository(GameHistoryDatabase.getInstance(context.applicationContext))
+    val shortGameSummaryRepository: ShortGameSummaryRepository = remember(context.applicationContext, signedInUser.accountId) {
+        RoomShortGameSummaryRepository(GameHistoryDatabase.getInstance(context.applicationContext), signedInUser.accountId)
+    }
+    LaunchedEffect(signedInUser.accountId, historyRepository) {
+        withContext(Dispatchers.IO) { historyRepository.claimLegacyRecords() }
+    }
+    LaunchedEffect(navigationViewModel, signedInUser.accountId) {
+        navigationViewModel.restoreGameplayState(signedInUser.accountId)
+        snapshotFlow { navigationViewModel.gameplayState.value }.collect { state ->
+            navigationViewModel.persistGameplayState(signedInUser.accountId, state)
+        }
     }
     val clearHistoryGate = remember { AtomicBoolean(false) }
     val coroutineScope = rememberCoroutineScope()
@@ -178,7 +231,7 @@ fun AppNavigation(
     val canNavigateBack = backStack.size > 1
 
     fun navigateTo(route: AppRoute) {
-        if (route != currentRoute) backStack.add(route)
+        if (backStack.lastOrNull() != route) backStack.add(route)
     }
 
     fun navigateBack() {
@@ -730,6 +783,7 @@ fun AppNavigation(
                 onRename = { profileId, name -> coroutineScope.launch(Dispatchers.IO) { profileRepository.renameProfile(profileId, name) } },
                 onDelete = { profileId -> coroutineScope.launch(Dispatchers.IO) { profileRepository.deleteProfile(profileId) } },
                 onBack = ::navigateBack,
+                accountUsername = signedInUser.username,
                 modifier = Modifier.fillMaxSize()
             )
             AppRoute.STATISTICS -> StatisticsScreen(
@@ -746,6 +800,7 @@ fun AppNavigation(
                 modifier = Modifier.fillMaxSize()
             )
             AppRoute.HELP -> RulesHelpScreen(Modifier.fillMaxSize())
+            AppRoute.ABOUT -> AboutScreen(Modifier.fillMaxSize())
             AppRoute.TUTORIAL -> InteractiveTutorialScreen(
                 onComplete = ::finishTutorial,
                 saveError = tutorialSaveError,
@@ -762,6 +817,11 @@ fun AppNavigation(
                 onManageQuestionReports = { selectedReportQuestionId = null; navigateTo(AppRoute.QUESTION_REPORTS) },
                 onManageProfiles = { navigateTo(AppRoute.PROFILES) },
                 onReplayTutorial = { tutorialSaveError = null; navigateTo(AppRoute.TUTORIAL) },
+                onAbout = { navigateTo(AppRoute.ABOUT) },
+                accountFullName = signedInUser.fullName,
+                accountUsername = signedInUser.username,
+                authFeedback = authFeedback,
+                onLogout = authViewModel::logout,
                 modifier = Modifier.fillMaxSize()
             )
         }

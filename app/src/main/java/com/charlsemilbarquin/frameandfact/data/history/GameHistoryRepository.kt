@@ -20,38 +20,46 @@ interface GameHistoryRepository {
     suspend fun saveCompletedGame(record: CompletedGameHistoryRecord): SaveHistoryResult
     suspend fun clearHistory(): Int
     suspend fun recentlyEncounteredQuestionIds(limit: Int): Set<QuestionId> = emptySet()
+    suspend fun claimLegacyRecords() = Unit
 }
 
-class RoomGameHistoryRepository(database: GameHistoryDatabase) : GameHistoryRepository {
+class RoomGameHistoryRepository(
+    database: GameHistoryDatabase,
+    private val ownerAccountId: String? = null
+) : GameHistoryRepository {
     private val dao = database.completedGameDao()
 
     override fun observeCompletedGames(): Flow<List<CompletedGameHistoryRecord>> =
-        dao.observeAll().map { games -> games.map { it.toRecord() } }
+        dao.observeAll(ownerAccountId).map { games -> games.map { it.toRecord() } }
 
     override suspend fun findCompletedGame(gameId: String): CompletedGameHistoryRecord? =
-        dao.getById(gameId)?.toRecord()
+        dao.getById(gameId, ownerAccountId)?.toRecord()
 
     override suspend fun saveCompletedGame(record: CompletedGameHistoryRecord): SaveHistoryResult {
-        val (game, participants, rounds) = record.toEntities()
+        val (game, participants, rounds) = record.toEntities(ownerAccountId)
         val inserted = dao.insertCompletedGame(game, participants, rounds)
         val savedRecord = if (inserted) {
             record
         } else {
             // The stable game ID is the idempotency key; a repeated completion is already saved.
-            checkNotNull(dao.getById(record.gameId)).toRecord()
+            checkNotNull(dao.getById(record.gameId, ownerAccountId)).toRecord()
         }
         awardFullGameAchievements(savedRecord)
         return if (inserted) SaveHistoryResult.Inserted else SaveHistoryResult.AlreadyPresent
     }
 
-    override suspend fun clearHistory(): Int = dao.deleteAllCompletedGames()
+    override suspend fun clearHistory(): Int = dao.deleteAllCompletedGames(ownerAccountId)
 
     override suspend fun recentlyEncounteredQuestionIds(limit: Int): Set<QuestionId> =
-        dao.recentlyEncounteredQuestionIds(limit.coerceAtLeast(0)).map(::QuestionId).toSet()
+        dao.recentlyEncounteredQuestionIds(ownerAccountId, limit.coerceAtLeast(0)).map(::QuestionId).toSet()
+
+    override suspend fun claimLegacyRecords() {
+        ownerAccountId?.let { dao.claimUnownedRecords(it) }
+    }
 
     private suspend fun awardFullGameAchievements(record: CompletedGameHistoryRecord) {
         val validRecord = LocalStatisticsCalculator.completedGames(listOf(record)).singleOrNull() ?: return
-        val savedGames = LocalStatisticsCalculator.completedGames(dao.observeAll().first().map { it.toRecord() })
+        val savedGames = LocalStatisticsCalculator.completedGames(dao.observeAll(ownerAccountId).first().map { it.toRecord() })
         validRecord.participants.forEach { participant ->
             val profileId = participant.profileId ?: return@forEach
             val completedCount = savedGames.count { game -> game.participants.any { it.profileId == profileId } }

@@ -12,9 +12,19 @@ Download SnapQuest for Android from the official GitHub Releases page.
 
 **[Download the Latest SnapQuest Release](https://github.com/charlsbarquin/SnapQuest/releases/latest)**
 
-Open the latest release and download the attached `.apk` file.
+The latest published release verified for this repository is **SnapQuest v1.0.0**.
 
-The signed release APK has been generated locally. The public download becomes available after the APK is uploaded as a release asset and the GitHub Release is published.
+| APK detail | Verified value |
+| --- | --- |
+| Download | [`SnapQuest-v1.0.0.apk`](https://github.com/charlsbarquin/SnapQuest/releases/latest/download/SnapQuest-v1.0.0.apk) |
+| Application version | `1.0` (version code `1`) |
+| Package | `com.charlsemilbarquin.frameandfact` |
+| Minimum Android | Android 8.0 Oreo / API 26 |
+| File size | 15,402,275 bytes |
+| SHA-256 | `23C267C45465B8B2CA505309CBD07DBAACD96252906A007B7FA320271AF60C0A` |
+| Signing certificate SHA-256 | `c93364918db34f0a69ec167d4139fa497d72784cd348b7722a6632d35bbba437` |
+
+The published v1.0.0 APK is an existing signed build; it predates the current local working-tree changes and is not presented as a build of them. The current Gradle release build is unsigned and is not a user-downloadable release. Any release for newer source must use the original signing key and receive project-owner approval before public publication.
 
 ### Installation
 
@@ -31,8 +41,9 @@ Only download the APK from the official repository or another source you trust.
 ### System Requirements
 
 - Android 8.0 Oreo or later, API 26 or higher.
-- Camera access for Find & Frame challenges.
+- Camera access when using Find & Frame challenges; camera hardware is optional because camera rounds can be skipped.
 - Internet access to download the APK. Gameplay does not require an internet connection.
+- Device-local account registration and sign-in are required to use the app; accounts are not synced to a server.
 
 A camera is not required just to install the application. Players can skip camera rounds if their device lacks a camera or they do not wish to take a photo.
 
@@ -117,17 +128,24 @@ SnapQuest declares camera permission and requests access when camera functionali
 
 The application manifest does not request the Android `INTERNET` permission. Trivia questions and camera prompts are bundled with the application.
 
-Gameplay, history, preferences, and reports use local app storage. The project does not configure an account system or backend service.
+Gameplay, history, preferences, reports, and account records use local app storage. Passwords are stored as salted PBKDF2 hashes; the local sign-in session identifier is encrypted with an Android Keystore key. Accounts are device-local and are not verified online or synced to a backend service. Game history, player profiles, statistics, and question reports are scoped to the signed-in local account. Existing records are preserved during the database migration and assigned to the oldest registered account; if there are no registered accounts, the first account to sign in claims the legacy records. Device settings remain local to the app installation.
 
 Downloading the APK from GitHub requires an internet connection. Playing the game does not.
 
 ### Local Data Storage
 
-- Room stores game history and related local records.
+- Room database version 7 stores local accounts, game history, player profiles, question reports, and Quick Trivia summaries. History, profiles, statistics, and reports are scoped to the signed-in local account. Migrations 1→2 through 6→7 are registered; migration 6→7 preserves legacy rows and assigns them to the oldest registered account, or leaves them available for the first account to claim when no account exists.
+- Passwords are stored as per-account salted PBKDF2 hashes. The local session identifier is protected with Android Keystore encryption.
 - Preferences DataStore stores app settings.
 - Captured photos are held temporarily in the app's private cache.
 - Temporary camera photos are deleted when the camera round ends or is canceled.
 - Photos are not saved in game history.
+
+## Architecture and Database
+
+The app is a single Android module. Jetpack Compose screens are grouped by feature; the Kotlin game domain holds round setup, turn rotation, outcomes, and scoring; data repositories load the bundled JSON content and store local records; CameraX is used for the in-app Find & Frame preview and capture flow.
+
+Room database version 7 exports its schema and registers the sequential migrations from versions 1 through 7. It stores local accounts, completed games and rounds, player profiles and achievements, question reports, and short-session summaries. Persistent game records are scoped to the signed-in local account. Settings are stored separately with Preferences DataStore. Statistics are derived from saved records rather than synced to a server.
 
 ### Backup and Data Removal
 
@@ -183,29 +201,33 @@ Java source and target compatibility are not the same as the JDK used to run Gra
 
 ### Run Tests
 
-Open PowerShell in the project root:
-
-`C:\Users\Asus\AndroidStudioProjects\FrameAndFact`
+Open PowerShell in the cloned project root.
 
 Run the local JVM unit tests:
 
 ```powershell
-.\gradlew.bat testDebugUnitTest
+.\gradlew.bat :app:testDebugUnitTest
+```
+
+Compile Android instrumentation test sources without running them:
+
+```powershell
+.\gradlew.bat :app:compileDebugAndroidTestKotlin
 ```
 
 Build the debug APK:
 
 ```powershell
-.\gradlew.bat assembleDebug
+.\gradlew.bat :app:assembleDebug
 ```
 
 Run connected Android instrumentation tests:
 
 ```powershell
-.\gradlew.bat connectedDebugAndroidTest
+.\gradlew.bat :app:connectedDebugAndroidTest
 ```
 
-The connected instrumentation command requires an authorized Android device or a configured emulator.
+Connected instrumentation requires an authorized Android device or emulator. Use a dedicated test device or isolated emulator: the debug test target may install the app package and must not be run over an installation whose data needs to be preserved.
 
 ### Debug APK Location
 
@@ -217,11 +239,11 @@ app/build/outputs/apk/debug/app-debug.apk
 
 This is a development build. Use a signed release APK for public distribution.
 
-### Signed Release APK
+### Signing a Release APK
 
-The signed release APK is generated through Android Studio's **Build > Generate Signed Bundle / APK** workflow.
+The current Gradle release build is not configured with a signing key. Running `:app:assembleRelease` creates `app/build/outputs/apk/release/app-release-unsigned.apk`, which is for build verification and is not a user-downloadable release.
 
-Choose APK, select the `app` module, select the release build variant, and use the configured release keystore.
+To create a distributable APK, use Android Studio's **Build > Generate Signed Bundle / APK** workflow with the original SnapQuest signing keystore. Select APK, the `app` module, and the release variant. Never generate a replacement key for app updates; Android requires the same signing certificate. Use a higher version code when publishing an update.
 
 The release APK is generally saved under:
 
@@ -229,7 +251,7 @@ The release APK is generally saved under:
 app/build/outputs/apk/release/
 ```
 
-The exact output location depends on the destination selected during APK generation.
+The exact signed output location depends on the destination selected during APK generation. The repository currently retains `app/release/SnapQuest-v1.0.0.apk` as a previously signed build; it is not represented as rebuilt from the current working tree.
 
 Keep the signing keystore and its passwords private. Do not commit them to the repository or attach them to a GitHub Release. Back up the keystore securely because future app updates should use the same signing key.
 
@@ -241,6 +263,7 @@ app/
   src/main/assets/content/         Bundled trivia and camera-prompt JSON
   src/main/java/.../domain/game/   Game models, rules, selection, and sessions
   src/main/java/.../data/content/  Content loading and validation
+  src/main/java/.../data/auth/     Local authentication and protected sessions
   src/main/java/.../data/history/  Local history, reports, profiles, and statistics
   src/main/java/.../data/local/    Room entities, DAO, database, and migrations
   src/main/java/.../data/settings/ Preferences DataStore settings
@@ -259,16 +282,20 @@ gradle/
 
 The project contains JVM unit tests and Android instrumentation tests for game rules, bundled content, history and migrations, settings, Compose screens, navigation recreation, and camera-related behavior.
 
-The latest recorded verification for the tested project build, dated November 2, 2026, was:
+Latest local verification, November 14, 2026:
 
-- **116 unit tests passed**, with no failures, errors, or skips.
-- **43 connected instrumentation tests passed**, with no failures or skips, on a Samsung SM-A536B running Android API 36.
-- Debug APK assembly completed successfully.
-- The camera workflow was tested on a physical Android device.
+- **119 JVM unit tests passed**, with no failures.
+- Android instrumentation test sources compiled; this is compile verification, not an instrumentation test run.
+- Debug and release APK assembly succeeded. The release output is unsigned.
+- Android lint completed with **0 errors and 5 warnings**. The remaining notices report newer available versions of Android Gradle Plugin, Kotlin Compose plugin, Compose BOM, DataStore Preferences, and Gson; dependencies were not upgraded as part of this documentation task.
+- The checked-in content contains 144 trivia questions and 24 camera prompts.
+- The existing signed `app/release/SnapQuest-v1.0.0.apk` has a verified signature and was left unchanged. It is an existing prior build, not a newly built artifact from the current working tree.
 
-These results describe the tested build. They do not guarantee that every device or Android version will behave identically. Run the test commands above against the current checkout to verify the current code.
+Connected UI, migration, and instrumentation tests were not run during this verification. ADB could not start its server. The project owner has confirmed that physical camera functionality is already fixed and tested; this documentation task did not rerun the camera flow.
 
-A connected-device test run depends on ADB authorization and device availability.
+## Project Status
+
+SnapQuest includes local account registration and sign-in, Solo and pass-and-play Multiplayer, trivia and Find & Frame rounds, practice modes, Room-backed history and account-scoped records, statistics, profiles, settings, and help/tutorial screens. Current local builds and JVM tests pass. The published v1.0.0 APK is verified; it does not include the later uncommitted changes in the current working tree. A new signed release for those changes remains pending.
 
 ## Troubleshooting
 
@@ -315,9 +342,9 @@ When reporting a problem, include:
 
 Do not attach private photos, documents, credentials, addresses, or other sensitive information.
 
-## License and Credits
+## License, Contributions, and Credits
 
-No license file is currently documented in this repository. Until the project owner chooses and adds a license, do not assume that others have permission to reuse, modify, or redistribute this source code.
+No `LICENSE` file is present. Until the project owner chooses and adds a license, do not assume that others have permission to reuse, modify, or redistribute this source code. The public repository has Issues and pull requests enabled for questions and proposed changes; submitting a change does not grant a license to the project or its assets.
 
 The project uses third-party libraries identified in its Gradle version catalog and dependency declarations. Review each library's license before redistribution.
 
@@ -327,16 +354,15 @@ No separate external-asset credits file was identified in the previous documenta
 
 SnapQuest's source code is available at [charlsbarquin/SnapQuest](https://github.com/charlsbarquin/SnapQuest).
 
-A signed release APK has been generated locally. To make it publicly downloadable:
+The current Gradle release build is unsigned. The preserved signed v1.0.0 APK predates the current working-tree changes, so it must not be presented as a build of the current source. Before publishing a release:
 
-1. Confirm that the signed release APK installs and works on a physical Android device.
-2. Open the [SnapQuest Releases page](https://github.com/charlsbarquin/SnapQuest/releases).
-3. Create a new GitHub Release with a version tag, such as `v1.0.0`.
-4. Attach the tested signed APK to the release.
-5. Publish the release.
-6. Open the published release page and verify that the APK downloads successfully.
-7. Confirm that the download link at the beginning of this README points to the latest published release.
+1. Build and test the intended source revision.
+2. Sign the APK with the original signing key and verify its certificate.
+3. Use a version tag that does not conflict with an existing tag or release.
+4. Attach the signed APK and its SHA-256 checksum to the GitHub Release.
+5. Obtain project-owner approval before publishing publicly.
+6. Verify the published release page and APK download, then confirm the latest-release link above resolves to it.
 
-The release download link will provide an installable app only after a release containing the APK has been published.
+The latest-release link provides an APK only when a release with an APK asset has been published.
 
 Never upload the release keystore, signing passwords, or other signing credentials to GitHub.

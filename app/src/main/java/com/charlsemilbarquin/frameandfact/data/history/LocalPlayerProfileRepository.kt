@@ -27,15 +27,18 @@ interface LocalPlayerProfileRepository {
     suspend fun deleteProfile(profileId: String): Boolean
 }
 
-class RoomLocalPlayerProfileRepository(private val database: GameHistoryDatabase) : LocalPlayerProfileRepository {
+class RoomLocalPlayerProfileRepository(
+    private val database: GameHistoryDatabase,
+    private val ownerAccountId: String? = null
+) : LocalPlayerProfileRepository {
     private val dao = database.completedGameDao()
 
-    override fun observeProfiles(): Flow<List<LocalPlayerProfile>> = dao.observePlayerProfiles().map { profiles ->
+    override fun observeProfiles(): Flow<List<LocalPlayerProfile>> = dao.observePlayerProfiles(ownerAccountId).map { profiles ->
         profiles.map { LocalPlayerProfile(it.profileId, it.displayName, it.createdAtEpochMillis) }
     }
 
     override fun observeAchievements(profileId: String): Flow<List<UnlockedAchievement>> =
-        dao.observeProfileAchievements(profileId).map { rows -> rows.mapNotNull { row ->
+        dao.observeProfileAchievements(profileId, ownerAccountId).map { rows -> rows.mapNotNull { row ->
             FullGameAchievement.entries.firstOrNull { it.id == row.achievementId }
                 ?.let { UnlockedAchievement(it, row.unlockedAtEpochMillis) }
         } }
@@ -44,15 +47,15 @@ class RoomLocalPlayerProfileRepository(private val database: GameHistoryDatabase
         val cleanName = displayName.trim()
         require(cleanName.isNotEmpty())
         val profile = LocalPlayerProfile("profile-${UUID.randomUUID()}", cleanName, System.currentTimeMillis())
-        dao.insertPlayerProfile(PlayerProfileEntity(profile.profileId, profile.displayName, profile.createdAtEpochMillis))
+        dao.insertPlayerProfile(PlayerProfileEntity(profile.profileId, profile.displayName, profile.createdAtEpochMillis, ownerAccountId))
         return profile
     }
 
     override suspend fun renameProfile(profileId: String, displayName: String): Boolean {
         val cleanName = displayName.trim()
         require(cleanName.isNotEmpty())
-        return dao.renamePlayerProfile(profileId, cleanName) > 0
+        return dao.renamePlayerProfile(profileId, cleanName, ownerAccountId) > 0
     }
 
-    override suspend fun deleteProfile(profileId: String): Boolean = dao.deletePlayerProfile(profileId) > 0
+    override suspend fun deleteProfile(profileId: String): Boolean = dao.deletePlayerProfile(profileId, ownerAccountId) > 0
 }

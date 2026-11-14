@@ -13,13 +13,23 @@ import com.charlsemilbarquin.frameandfact.domain.game.ParticipantKind
 import com.charlsemilbarquin.frameandfact.domain.game.RoundOutcome
 import com.charlsemilbarquin.frameandfact.domain.game.RoundType
 
-@Entity(tableName = "completed_games")
+@Entity(
+    tableName = "completed_games",
+    foreignKeys = [ForeignKey(
+        entity = AuthAccountEntity::class,
+        parentColumns = ["accountId"],
+        childColumns = ["ownerAccountId"],
+        onDelete = ForeignKey.CASCADE
+    )],
+    indices = [Index("ownerAccountId")]
+)
 data class CompletedGameEntity(
     @PrimaryKey val gameId: String,
     val completedAtEpochMillis: Long,
     val rulesVersion: Int,
     val selectedCategories: String,
-    val difficultyLevels: String
+    val difficultyLevels: String,
+    val ownerAccountId: String? = null
 )
 
 @Entity(
@@ -106,11 +116,21 @@ data class CompletedGameWithDetails(
     val rounds: List<CompletedGameRoundEntity>
 )
 
-@Entity(tableName = "player_profiles")
+@Entity(
+    tableName = "player_profiles",
+    foreignKeys = [ForeignKey(
+        entity = AuthAccountEntity::class,
+        parentColumns = ["accountId"],
+        childColumns = ["ownerAccountId"],
+        onDelete = ForeignKey.CASCADE
+    )],
+    indices = [Index("ownerAccountId")]
+)
 data class PlayerProfileEntity(
     @PrimaryKey val profileId: String,
     val displayName: String,
-    val createdAtEpochMillis: Long
+    val createdAtEpochMillis: Long,
+    val ownerAccountId: String? = null
 )
 
 @Entity(
@@ -130,14 +150,15 @@ data class ProfileAchievementEntity(
     val unlockedAtEpochMillis: Long
 )
 
-fun CompletedGameHistoryRecord.toEntities(): Triple<CompletedGameEntity, List<CompletedGameParticipantEntity>, List<CompletedGameRoundEntity>> =
+fun CompletedGameHistoryRecord.toEntities(ownerAccountId: String? = null): Triple<CompletedGameEntity, List<CompletedGameParticipantEntity>, List<CompletedGameRoundEntity>> =
     Triple(
         CompletedGameEntity(
             gameId = gameId,
             completedAtEpochMillis = completedAtEpochMillis,
             rulesVersion = rulesVersion,
             selectedCategories = selectedCategories.joinToString("|"),
-            difficultyLevels = difficultyLevels.joinToString("|")
+            difficultyLevels = difficultyLevels.joinToString("|"),
+            ownerAccountId = ownerAccountId
         ),
         participants.mapIndexed { index, participant ->
             CompletedGameParticipantEntity(

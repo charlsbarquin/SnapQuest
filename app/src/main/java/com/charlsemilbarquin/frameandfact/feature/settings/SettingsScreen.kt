@@ -57,14 +57,20 @@ fun SettingsScreen(
     clearHistoryState: ClearHistoryUiState,
     onThemeSelected: (ThemePreference) -> Unit,
     onConfirmClearHistory: () -> Unit,
+    modifier: Modifier = Modifier,
     onManageQuestionReports: () -> Unit = {},
     onManageProfiles: () -> Unit = {},
     onReplayTutorial: () -> Unit = {},
-    modifier: Modifier = Modifier
+    onAbout: () -> Unit = {},
+    accountFullName: String = "",
+    accountUsername: String = "",
+    authFeedback: com.charlsemilbarquin.frameandfact.feature.auth.AuthFeedback = com.charlsemilbarquin.frameandfact.feature.auth.AuthFeedback(),
+    onLogout: () -> Unit = {}
 ) {
     var showThemePicker by rememberSaveable { mutableStateOf(false) }
     var showPrivacyDetails by rememberSaveable { mutableStateOf(false) }
     var showClearConfirmation by rememberSaveable { mutableStateOf(false) }
+    var showLogoutConfirmation by rememberSaveable { mutableStateOf(false) }
     val settings = (settingsState as? SettingsReadState.Ready)?.settings ?: AppSettings.DEFAULT
 
     Column(
@@ -135,6 +141,21 @@ fun SettingsScreen(
             }
         }
 
+        SettingsSection(title = "Account") {
+            Text("$accountFullName · @$accountUsername", style = MaterialTheme.typography.titleSmall)
+            Text("This account is local to this device and is separate from multiplayer player profiles. Game history, profiles, statistics, and reports belong to this account.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Button(onClick = { showLogoutConfirmation = true }, enabled = !authFeedback.isBusy, modifier = Modifier.fillMaxWidth().heightIn(min = 44.dp)) {
+                if (authFeedback.isBusy) CircularProgressIndicator()
+                else Text("Log out")
+            }
+            if (authFeedback.isError && authFeedback.message != null) {
+                Text(authFeedback.message, color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodySmall)
+            }
+        }
+
+        SettingsSection(title = "About") {
+            SettingsActionRow("About SnapQuest", "Application, gameplay, and developer information", R.drawable.ic_snapquest_mark, onAbout)
+        }
         SettingsSection(title = "Privacy") {
             SettingsActionRow(
                 title = "Offline & local storage",
@@ -179,8 +200,8 @@ fun SettingsScreen(
             title = { Text("Offline & local storage") },
             text = {
                 Text(
-                    "Completed-game history and this theme preference are stored locally and excluded from system backup. " +
-                        "SnapQuest does not require an account or synchronize data to a cloud service. " +
+                    "Accounts, game history, and theme settings are stored locally and excluded from system backup. Passwords are stored as salted hashes; the saved sign-in session is encrypted with an Android Keystore key. " +
+                    "Accounts are not verified online and do not sync to other devices. Game history, player profiles, statistics, and reports are kept separately for each account. " +
                         "Camera access is requested only when you start a Find & Frame camera. Captures are kept temporarily " +
                         "in app-private storage and deleted at round or game end or during stale-file cleanup; photos are not attached to history."
                 )
@@ -189,6 +210,19 @@ fun SettingsScreen(
         )
     }
 
+    if (showLogoutConfirmation) {
+        AlertDialog(
+            onDismissRequest = { if (!authFeedback.isBusy) showLogoutConfirmation = false },
+            title = { Text("Log out of this device?") },
+            text = { Text("You can sign in again with this device-local account. Game history, player profiles, statistics, and reports will remain on this device and stay visible to other local accounts.") },
+            confirmButton = {
+                TextButton(onClick = { showLogoutConfirmation = false; onLogout() }, enabled = !authFeedback.isBusy) { Text("Confirm Logout") }
+            },
+            dismissButton = {
+                TextButton(onClick = { showLogoutConfirmation = false }, enabled = !authFeedback.isBusy) { Text("Stay signed in") }
+            }
+        )
+    }
     if (showClearConfirmation) {
         AlertDialog(
             onDismissRequest = { showClearConfirmation = false },

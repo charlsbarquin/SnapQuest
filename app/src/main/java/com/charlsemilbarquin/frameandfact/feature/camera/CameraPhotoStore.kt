@@ -35,7 +35,7 @@ class CameraPhotoStore(cacheDirectory: File) {
         directory.delete() // Succeeds only when empty; never recursively deletes other data.
     }
 
-    /** Called on app entry because unfinished games are not restored after process death. */
+    /** Called on app entry because temporary photo files are not restored after process recreation. */
     fun cleanupStaleCaptures() = deleteAllCaptures()
 
     private fun ensureCaptureDirectory() {

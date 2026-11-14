@@ -58,8 +58,8 @@ fun StatisticsScreen(
     achievements: Map<String, List<UnlockedAchievement>>,
     onRetry: () -> Unit,
     onManageProfiles: () -> Unit,
+    modifier: Modifier = Modifier,
     onStartPlaying: () -> Unit = {},
-    modifier: Modifier = Modifier
 ) {
     var selectedPeriod by rememberSaveable { mutableIntStateOf(0) }
     val games = (historyState as? HistoryUiState.Populated)?.games.orEmpty()
