@@ -12,19 +12,19 @@ Download SnapQuest for Android from the official GitHub Releases page.
 
 **[Download the Latest SnapQuest Release](https://github.com/charlsbarquin/SnapQuest/releases/latest)**
 
-The latest published release verified for this repository is **SnapQuest v1.0.1**.
+The latest release is **SnapQuest v1.0.2**.
 
 | APK detail | Verified value |
 | --- | --- |
-| Download | [`SnapQuest-v1.0.1.apk`](https://github.com/charlsbarquin/SnapQuest/releases/latest/download/SnapQuest-v1.0.1.apk) |
-| Application version | `1.0.1` (version code `2`) |
+| Download | [`SnapQuest-v1.0.2.apk`](https://github.com/charlsbarquin/SnapQuest/releases/latest/download/SnapQuest-v1.0.2.apk) |
+| Application version | `1.0.2` (version code `3`) |
 | Package | `com.charlsemilbarquin.frameandfact` |
 | Minimum Android | Android 8.0 Oreo / API 26 |
-| File size | 15,450,615 bytes |
-| SHA-256 | `B22881BD9B438F9CA66D97011738D228D2CEFD022A15403B1966A3AAFD8EC581` |
+| File size | 15,517,222 bytes |
+| SHA-256 | `AF85387BC892F8E926F6743EF16E97788F1945E20B281A31CCE30558D7F3F188` |
 | Signing certificate SHA-256 | `c93364918db34f0a69ec167d4139fa497d72784cd348b7722a6632d35bbba437` |
 
-The published v1.0.1 APK is signed with the original SnapQuest release key and was built from the source at its release tag. The preserved v1.0.0 APK is an earlier build. Gradle's standard release task still creates an unsigned APK; use Android Studio's signed APK workflow with the original key for future releases.
+The v1.0.2 APK is signed with the original SnapQuest release key and is prepared from the source at its release tag. It corrects the launcher icon resources so Android and APK viewers can display the SnapQuest mark instead of the default Android icon. The v1.0.1 and v1.0.0 APKs remain available as earlier releases. Gradle's standard release task still creates an unsigned APK; sign future releases with the original key.
 
 ### Installation
 
@@ -282,7 +282,7 @@ gradle/
 
 The project contains JVM unit tests and Android instrumentation tests for game rules, bundled content, history and migrations, settings, Compose screens, navigation recreation, and camera-related behavior.
 
-Latest local verification, November 14, 2026:
+Recorded test results from November 14, 2026:
 
 - **119 JVM unit tests passed**, with no failures.
 - Android instrumentation test sources compiled; this is compile verification, not an instrumentation test run.
@@ -295,7 +295,9 @@ Connected UI, migration, and instrumentation tests were not run during this veri
 
 ## Project Status
 
-SnapQuest includes local account registration and sign-in, Solo and pass-and-play Multiplayer, trivia and Find & Frame rounds, practice modes, Room-backed history and account-scoped records, statistics, profiles, settings, and help/tutorial screens. The v1.0.1 source is pushed to `main`, and its signed APK is published on GitHub Releases. The preserved v1.0.0 APK remains an earlier build.
+On November 21, 2026, the v1.0.2 release APK assembled successfully. Its package version, launcher icon resource, SHA-256 checksum, and signing certificate were verified locally. JVM and connected instrumentation tests were not rerun for the icon correction. The project owner has separately confirmed that physical camera functionality was fixed and tested; this release preparation did not rerun the camera flow.
+
+SnapQuest includes local account registration and sign-in, Solo and pass-and-play Multiplayer, trivia and Find & Frame rounds, practice modes, Room-backed history and account-scoped records, statistics, profiles, settings, and help/tutorial screens. The v1.0.2 source is on `main`, and its signed APK is published on GitHub Releases. The v1.0.1 and v1.0.0 releases remain earlier builds.
 
 ## Troubleshooting
 
@@ -354,7 +356,7 @@ No separate external-asset credits file was identified in the previous documenta
 
 SnapQuest's source code is available at [charlsbarquin/SnapQuest](https://github.com/charlsbarquin/SnapQuest).
 
-The current Gradle release build is unsigned. The published v1.0.1 APK was signed through Android Studio with the original release key. For future releases:
+The current Gradle release build is unsigned. The v1.0.2 APK was signed with the original release key. For future releases:
 
 1. Build and test the intended source revision.
 2. Sign the APK with the original signing key and verify its certificate.
